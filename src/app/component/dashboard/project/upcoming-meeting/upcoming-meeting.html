@@ -1,0 +1,48 @@
+<div class="card mb-0 upcoming-meeting">
+  <div class="card-header">
+    <div class="header-top">
+      <h4>Upcoming Meeting</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body p-0 pe-3">
+    <div class="default-datepicker cal-date-widget">
+      <div class="datepicker-here" data-language="en">
+        <ngb-datepicker #dp (navigate)="date = $event.next" />
+      </div>
+    </div>
+    <div class="today-weather">
+      <div class="d-flex">
+        <img src="assets/images/dashboard-3/sun.gif" alt="user" /><span
+          >Today san Fransico,CA</span
+        >
+        <div class="flex-grow-1">
+          <h6>Jun,07</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body p-0 pe-3">
+    <apx-chart
+      [series]="raderchartData.series"
+      [chart]="raderchartData.chart"
+      [stroke]="raderchartData.stroke"
+      [fill]="raderchartData.fill"
+      [markers]="raderchartData.markers"
+    />
+  </div>
+</div>

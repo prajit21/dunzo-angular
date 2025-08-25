@@ -1,0 +1,35 @@
+<div class="row">
+  @for (item of trading; track item) {
+  <div class="col-xxl-3 col-xl-50 col-sm-6 proorder-xl-2">
+    <div class="card since">
+      <div class="card-body {{ item.borderclass }}">
+        <div class="customer-card d-flex b-l-{{ item.class }} border-2">
+          <div class="ms-3">
+            <h3 class="mt-1">{{ item.title }}</h3>
+            <h5 class="mt-1">{{ item.info }}</h5>
+          </div>
+          <div class="dashboard-user bg-light-{{ item.class }}">
+            <span></span>
+            <svg class="stroke-icon">
+              <use
+                attr.xlink:href="assets/svg/icon-sprite.svg#{{ item.icon }}"
+              ></use>
+            </svg>
+          </div>
+        </div>
+        <div class="customer mt-2">
+          <span class="me-1">
+            <svg class="stroke-icon">
+              <use
+                attr.xlink:href="assets/svg/icon-sprite.svg#{{ item.arrow }}"
+              ></use>
+            </svg>
+          </span>
+          <span class="font-{{ item.statusclass }} me-2">{{ item.data }}</span>
+          <span>Since last Week</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>

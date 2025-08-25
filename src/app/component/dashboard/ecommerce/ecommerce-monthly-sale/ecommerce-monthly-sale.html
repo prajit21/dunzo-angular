@@ -1,0 +1,42 @@
+<div class="card monthly-chart">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Monthly Sale</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="d-flex">
+      <div class="monthly">
+        <h5>Growth</h5>
+        <h3>$7,234</h3>
+      </div>
+      <div class="growth" id="monthlychart">
+        <apx-chart
+          [series]="MonthlyData.series"
+          [chart]="MonthlyData.chart"
+          [grid]="MonthlyData.grid"
+          [markers]="MonthlyData.markers"
+          [yaxis]="MonthlyData.yaxis"
+          [xaxis]="MonthlyData.xaxis"
+          [colors]="MonthlyData.colors"
+          [stroke]="MonthlyData.stroke"
+        />
+      </div>
+    </div>
+  </div>
+</div>

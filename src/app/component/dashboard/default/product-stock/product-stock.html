@@ -1,0 +1,47 @@
+<div class="card product-chart mb-0">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Product Stock</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body pb-0">
+    <div class="d-flex">
+      <h2 class="me-2">($1,23,456)</h2>
+      <span>Total Product Stock</span>
+    </div>
+    <div class="product-chart">
+      <div class="shap-block">
+        <div class="rounded-shap animate-bg-secondary"><i></i><i></i></div>
+      </div>
+      <div id="product-chart">
+        <apx-chart
+          [series]="productChartData.series"
+          [chart]="productChartData.chart"
+          [fill]="productChartData.fill"
+          [grid]="productChartData.grid"
+          [xaxis]="productChartData.xaxis"
+          [yaxis]="productChartData.yaxis"
+          [markers]="productChartData.markers"
+          [stroke]="productChartData.stroke"
+          [responsive]="productChartData.responsive"
+          [dataLabels]="productChartData.dataLabels"
+        />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="card">
+  <div class="card-header card-no-border pb-0">
+    <div class="header-top">
+      <h4>Total Investment</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body p-0 pb-3 pt-3">
+    <div class="investment-card">
+      <div id="Investment-chart">
+        <apx-chart
+          [series]="TotalInvestmentData.series"
+          [chart]="TotalInvestmentData.chart"
+          [legend]="TotalInvestmentData.legend"
+          [colors]="TotalInvestmentData.colors"
+          [yaxis]="TotalInvestmentData.yaxis"
+          [responsive]="TotalInvestmentData.responsive"
+          [plotOptions]="TotalInvestmentData.plotOptions"
+          [dataLabels]="TotalInvestmentData.dataLabels"
+        />
+      </div>
+      <ul>
+        <li>
+          <h5>Total</h5>
+          <span>$ 5,8272</span>
+        </li>
+        <li>
+          <h5>Monthly</h5>
+          <span>$ 6,2456</span>
+        </li>
+        <li>
+          <h5>Daily</h5>
+          <span>$ 5,8704</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

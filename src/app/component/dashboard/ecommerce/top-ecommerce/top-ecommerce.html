@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-xl-2 col-xl-33 col-sm-6 box-col-4 ps-0">
+    <app-online-order />
+  </div>
+  <div class="col-xl-2 col-xl-33 col-sm-6 box-col-4 pedding-sm">
+    <app-offline-order />
+  </div>
+  <div
+    class="col-xl-2 col-xl-33 col-sm-6 box-col-4 pedding-end pedding-sm-start pedding-sm"
+  >
+    <app-total-revenue />
+  </div>
+  <div class="col-xl-2 col-xl-40 col-sm-6 box-col-5 pedding-start pedding-sm">
+    <app-feedback />
+  </div>
+  <div class="col-xl-4 col-xl-70 box-col-7 pe-0 pedding-sm">
+    <div class="card mb-0 margin-bottom sales-event">
+      <div class="card-body pt-0">
+        <div class="d-flex">
+          <div class="event">
+            <h3>Sales Event Calendar</h3>
+            <p>
+              Bland it curability id vel vitae Ullamcorper sapien ante quam id.
+              Vulputate viverra dictum.
+            </p>
+          </div>
+          <div class="sale">
+            <img src="assets/images/dashboard-2/event.png" alt="" />
+          </div>
+        </div>
+        <div class="set-sales">
+          <a class="btn btn-primary mt-2" [routerLink]="['/calender']"
+            >Set Sales Events</a
+          >
+          <a
+            class="btn discount mt-2"
+            [routerLink]="['/ecommerce/product-list']"
+            >Discount
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

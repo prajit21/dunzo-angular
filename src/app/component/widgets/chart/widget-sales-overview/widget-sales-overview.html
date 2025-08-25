@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-header">
+    <div class="header-top">
+      <h3>Sales Overview</h3>
+      <div class="card-header-right-icon">
+        <div class="dropdown">
+          <button
+            class="btn dropdown-toggle"
+            id="dropdownMenuButton"
+            type="button"
+            (click)="openMenu()"
+          >
+            Today
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+            <a class="dropdown-item" href="javascript:void(0);">Today</a
+            ><a class="dropdown-item" href="javascript:void(0);">Tomorrow</a
+            ><a class="dropdown-item" href="javascript:void(0);">Yesterday</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="chart-container progress-chart">
+      <div id="sales-overview-2">
+        <apx-chart
+          [series]="SaleOverViewChart.series"
+          [chart]="SaleOverViewChart.chart"
+          [labels]="SaleOverViewChart.labels"
+          [legend]="SaleOverViewChart.legend"
+          [colors]="SaleOverViewChart.colors"
+          [fill]="SaleOverViewChart.fill"
+          [tooltip]="SaleOverViewChart.tooltip"
+          [grid]="SaleOverViewChart.grid"
+          [xaxis]="SaleOverViewChart.xaxis"
+          [yaxis]="SaleOverViewChart.yaxis"
+          [markers]="SaleOverViewChart.markers"
+          [stroke]="SaleOverViewChart.stroke"
+          [responsive]="SaleOverViewChart.responsive"
+        />
+      </div>
+    </div>
+  </div>
+</div>

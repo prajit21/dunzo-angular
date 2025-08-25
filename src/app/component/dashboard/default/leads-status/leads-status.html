@@ -1,0 +1,60 @@
+<div class="card leads">
+  <div class="card-header card-no-border pb-0">
+    <div class="header-top">
+      <h4>Leads Status</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="lead-status">
+      <ul>
+        <li>Customers</li>
+        <li class="border-3 b-l-primary">Lena Smith</li>
+        <li class="border-3 b-l-secondary">Nicol Green</li>
+        <li class="border-3 b-l-danger mb-0">Tom Taylor</li>
+      </ul>
+      <ul>
+        <li>Last Contacted</li>
+        <li>June 14, 2024</li>
+        <li>June 16, 2024</li>
+        <li class="mb-0">June 18, 2024</li>
+      </ul>
+      <ul>
+        <li>Sales Rep</li>
+        <li>
+          <img src="assets/images/dashboard/user/2.png" alt="" />Paul Miller
+        </li>
+        <li><img src="assets/images/dashboard/user/1.png" alt="" />Alen Lee</li>
+        <li class="mb-0">
+          <img src="assets/images/dashboard/user/3.png" alt="" />Lucy White
+        </li>
+      </ul>
+      <ul>
+        <li>Status</li>
+        <li class="bg-light-primary font-primary">Deal Won</li>
+        <li class="bg-light-secondary font-secondary">Intro Call</li>
+        <li class="bg-light-danger font-danger mb-0">Stuck</li>
+      </ul>
+      <ul>
+        <li>Deal Value</li>
+        <li>$ 200.2k</li>
+        <li>$210k</li>
+        <li class="mb-0">$70k</li>
+      </ul>
+    </div>
+  </div>
+</div>

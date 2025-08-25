@@ -1,0 +1,81 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Recent Order</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body pt-0 recent">
+    <div class="table-responsive custom-scrollbar">
+      <table class="table display" id="product-order" style="width: 100%">
+        <thead>
+          <tr>
+            <th>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" />
+                <label class="form-check-label"></label>
+              </div>
+            </th>
+            <th>Product Name</th>
+            <th>Customer Name</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (data of RecentOrder; track data) {
+          <tr>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" />
+                <label class="form-check-label"></label>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex">
+                <div class="flex-shrink-0">
+                  <img src="{{ data.img }}" alt="" />
+                </div>
+                <div class="flex-grow-1 ms-2">
+                  <a href="javascript:void(0);">
+                    <h6>{{ data.name }}</h6>
+                    <span>{{ data.id }}</span>
+                  </a>
+                </div>
+              </div>
+            </td>
+            <td>
+              <h6>{{ data.name }}</h6>
+              <span>{{ data.customername }}</span>
+            </td>
+            <td>{{ data.time }}</td>
+            <td>
+              <button
+                class="btn bg-light-{{ data.class }} txt-{{ data.class }}"
+              >
+                {{ data.status }}
+              </button>
+            </td>
+            <td>{{ data.price }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

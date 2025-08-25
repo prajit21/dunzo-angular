@@ -1,0 +1,49 @@
+<div class="card new-customers" (clickOutside)="clickOutside()">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>New Customers</h4>
+      <div class="dropdown icon-dropdown">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive custom-scrollbar">
+      <table class="table display" style="width: 100%">
+        <tbody>
+          @for (data of NewCustomerData; track data) {
+          <tr>
+            <td>
+              <div class="d-flex">
+                <img src="{{ data.img }}" alt="" />
+                <div class="flex-grow-1 ms-2">
+                  <a [routerLink]="['/user/users-profile']"
+                    ><span>{{ data.name }}</span>
+                    <h5>{{ data.id }}</h5>
+                  </a>
+                </div>
+                <div class="active-status active-online"></div>
+              </div>
+            </td>
+            <td>{{ data.product }}</td>
+            <td>{{ data.date }}</td>
+            <td>{{ data.price }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

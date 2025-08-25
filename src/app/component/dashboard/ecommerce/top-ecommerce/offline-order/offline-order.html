@@ -1,0 +1,38 @@
+<div class="card mb-0 online-order">
+  <div class="card-header offline-order">
+    <div class="d-flex">
+      <div class="order bg-light-secondary">
+        <span></span>
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#delivery"></use>
+        </svg>
+      </div>
+      <div class="arrow-chart">
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#arrow-chart-up"></use></svg
+        ><span class="font-success">+8.3%</span>
+      </div>
+    </div>
+    <div class="online">
+      <span>Offline Order</span>
+      <h2>62,5461</h2>
+    </div>
+  </div>
+  <div class="card-body ps-2 pe-2">
+    <div class="offline-chart" id="offline-chart">
+      <apx-chart
+        [series]="OfflineOrderData.series"
+        [chart]="OfflineOrderData.chart"
+        [grid]="OfflineOrderData.grid"
+        [markers]="OfflineOrderData.markers"
+        [yaxis]="OfflineOrderData.yaxis"
+        [xaxis]="OfflineOrderData.xaxis"
+        [dataLabels]="OfflineOrderData.dataLabels"
+        [colors]="OfflineOrderData.colors"
+        [responsive]="OfflineOrderData.responsive"
+        [stroke]="OfflineOrderData.stroke"
+        [fill]="OfflineOrderData.fill"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Project Created</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body p-0">
+    <div id="revenuegrowth">
+      <apx-chart
+        [series]="projectCreatedChart.series"
+        [chart]="projectCreatedChart.chart"
+        [grid]="projectCreatedChart.grid"
+        [fill]="projectCreatedChart.fill"
+        [legend]="projectCreatedChart.legend"
+        [plotOptions]="projectCreatedChart.plotOptions"
+        [dataLabels]="projectCreatedChart.dataLabels"
+        [yaxis]="projectCreatedChart.yaxis"
+        [xaxis]="projectCreatedChart.xaxis"
+        [colors]="projectCreatedChart.colors"
+        [stroke]="projectCreatedChart.stroke"
+      />
+    </div>
+  </div>
+</div>

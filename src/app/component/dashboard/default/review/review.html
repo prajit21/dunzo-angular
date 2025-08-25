@@ -1,0 +1,55 @@
+<div class="card review-slider" (clickOutside)="clickOutside()">
+  <div class="card-header card-no-border pb-0">
+    <div class="header-top">
+      <h4>Review</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <owl-carousel-o [options]="reviewOptionsData">
+      @for (sildesItem of review; track sildesItem) {
+      <ng-template carouselSlide>
+        <div class="review">
+          <div>
+            <img
+              class="img-fluid"
+              src="assets/images/dashboard/user/14.png"
+              alt=""
+            />
+            <div class="review-content">
+              <h2>{{ sildesItem.name }}</h2>
+            </div>
+            <div class="d-flex">
+              <h5>{{ sildesItem.star }}</h5>
+              <p class="pull-right ms-2 me-2 mb-0 mt-0">
+                <i class="fa fa-star font-secondary"></i>
+              </p>
+              <div class="flex-grow-1">
+                <h5>{{ sildesItem.number }}</h5>
+              </div>
+            </div>
+            <p>
+              “Best Product i’ve been seen on market, best price, best quality!
+              Overall Amazing!!!”
+            </p>
+          </div>
+        </div>
+      </ng-template>
+      }
+    </owl-carousel-o>
+  </div>
+</div>

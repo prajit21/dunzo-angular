@@ -1,0 +1,62 @@
+<div class="card today-task">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Today’s Tasks</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body clients-project">
+    <div class="table-responsive custom-scrollbar">
+      <table class="table display" style="width: 100%">
+        <thead>
+          <tr>
+            <th>Task Name</th>
+            <th>Clients</th>
+            <th>Deadline</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (data of TasksData; track data) {
+          <tr>
+            <td>
+              <a [routerLink]="['/project/list']">
+                <p>{{ data.tasksname }}</p>
+              </a>
+            </td>
+            <td>
+              <div class="user-details customers">
+                <ul>
+                  <li class="d-inline-block">
+                    <img src="{{ data.img1 }}" alt="user" />
+                  </li>
+                  <li class="d-inline-block">
+                    <img src="{{ data.img2 }}" alt="user" />
+                  </li>
+                  <li class="d-inline-block">
+                    <img src="{{ data.img3 }}" alt="user" />
+                  </li>
+                </ul>
+              </div>
+            </td>
+            <td>{{ data.deadline }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

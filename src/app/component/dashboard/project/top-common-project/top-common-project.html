@@ -1,0 +1,91 @@
+<div class="row">
+  @for (data of ProjectData; track data) {
+  <div class="col-xl-4 col-lg-4 col-md-6" (clickOutside)="clickOutside()">
+    <div class="card web-card">
+      <div class="card-body">
+        <div class="d-flex {{ data.mobilecard }}">
+          <div class="header-top">
+            <div class="mobile-app bg-light-{{ data.class }}">
+              <span></span>
+              <svg class="stroke-icon">
+                <use
+                  attr.xlink:href="assets/svg/icon-sprite.svg#{{ data.icon }}"
+                ></use>
+              </svg>
+            </div>
+            <div class="flex-grow-1">
+              <h4>{{ data.info }}</h4>
+              <span>{{ data.span }}</span>
+            </div>
+          </div>
+          <div class="dropdown icon-dropdown">
+            <button
+              class="btn dropdown-toggle"
+              id="userdropdown6"
+              type="button"
+              (click)="openMenu(data.id)"
+            >
+              <i class="icon-more-alt"></i>
+            </button>
+            <div
+              class="dropdown-menu dropdown-menu-end"
+              [class.show]="openid === data.id"
+            >
+              <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+              <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+              <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <ul>
+            <li>
+              <svg>
+                <use href="assets/svg/icon-sprite.svg#calendar"></use></svg
+              ><span>{{ data.date }}</span>
+            </li>
+            <li>
+              <svg>
+                <use href="assets/svg/icon-sprite.svg#message"></use></svg
+              ><span>{{ data.msg }}</span>
+            </li>
+            <li>
+              <svg>
+                <use href="assets/svg/icon-sprite.svg#link"></use></svg
+              ><span>{{ data.link }}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-shrink-0">
+          <div class="user-details customers">
+            <ul>
+              <li class="d-inline-block">
+                <img src="{{ data.img1 }}" alt="user" />
+              </li>
+              <li class="d-inline-block">
+                <img src="{{ data.img2 }}" alt="user" />
+              </li>
+              <li class="d-inline-block">
+                <img src="{{ data.img3 }}" alt="user" />
+              </li>
+            </ul>
+          </div>
+          <div class="progress-value">
+            <span>Progress<span>{{ data.value }}</span></span>
+            <div class="progress">
+              <div
+                class="progress-bar bg-{{ data.class }}"
+                role="progressbar"
+                [ngStyle]="{ width: data.value }"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>

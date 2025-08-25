@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h3>Single File Upload</h3>
+  </div>
+  <div class="card-body">
+    <div class="single-file-dropzone">
+      <dropzone
+        [config]="imageConfig"
+        [message]="text"
+        [className]="'custom-drop-zone custom-dropzone-1'"
+        (error)="onUploadError($event)"
+        (success)="onUploadSuccess($event)"
+      />
+    </div>
+  </div>
+</div>

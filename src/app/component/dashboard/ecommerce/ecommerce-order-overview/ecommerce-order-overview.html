@@ -1,0 +1,76 @@
+<div class="card order-overview">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Order Overview</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="d-flex">
+      <h2 class="me-2">($3,512,201)</h2>
+      <h6>Total Revenue</h6>
+    </div>
+    <div class="total-revenue">
+      <div class="d-flex">
+        <h5 class="me-2">40</h5>
+        <span>(Online Order)</span>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-primary"
+          role="progressbar"
+          style="width: 50%"
+          aria-valuenow="10"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+    </div>
+    <div class="total-revenue">
+      <div class="d-flex">
+        <h5 class="me-2">60</h5>
+        <span>(Offline Order)</span>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-secondary"
+          role="progressbar"
+          style="width: 70%"
+          aria-valuenow="10"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+    </div>
+    <div class="total-revenue">
+      <div class="d-flex">
+        <h5 class="me-2">20</h5>
+        <span>(Cash On Develery)</span>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-danger"
+          role="progressbar"
+          style="width: 30%"
+          aria-valuenow="10"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>

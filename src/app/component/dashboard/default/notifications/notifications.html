@@ -1,0 +1,60 @@
+<div class="card custom-scrollbar">
+  <div class="card-header card-no-border pb-0">
+    <div class="header-top">
+      <h4>Notifications</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <ul class="notification-box">
+      @for (data of notificationsData; track data) {
+      <li class="d-flex">
+        <div class="flex-shrink-0">
+          <img src="{{ data.img }}" alt="" />
+        </div>
+        <div class="flex-grow-1">
+          <a [routerLink]="['/ecommerce/private-chat']">
+            <h5>{{ data.des }}</h5>
+          </a>
+          <p>{{ data.time }}</p>
+        </div>
+        <div
+          class="dropdown icon-dropdown"
+          (clickOutside)="data.isShow = false"
+        >
+          <button
+            class="btn dropdown-toggle"
+            id="userdropdown6"
+            type="button"
+            (click)="openMenu1(data.id)"
+          >
+            <i class="icon-more-alt"></i>
+          </button>
+          <div
+            class="dropdown-menu dropdown-menu-end"
+            [class.show]="data.isShow"
+          >
+            <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+            <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+            <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+          </div>
+        </div>
+      </li>
+      }
+    </ul>
+  </div>
+</div>

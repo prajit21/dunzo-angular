@@ -1,0 +1,36 @@
+<div class="card mb-0 online-order">
+  <div class="card-header pb-0">
+    <div class="d-flex">
+      <div class="order bg-light-primary">
+        <span></span>
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#basket"></use>
+        </svg>
+      </div>
+      <div class="arrow-chart">
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#arrow-chart"></use></svg
+        ><span class="font-danger">-6.3%</span>
+      </div>
+    </div>
+    <div class="online">
+      <span>Online Order</span>
+      <h2>16,2873</h2>
+    </div>
+  </div>
+  <div class="card-body pt-0 ps-2 pe-2">
+    <div id="online-chart">
+      <apx-chart
+        [series]="OnlineOrderData.series"
+        [chart]="OnlineOrderData.chart"
+        [grid]="OnlineOrderData.grid"
+        [plotOptions]="OnlineOrderData.plotOptions"
+        [yaxis]="OnlineOrderData.yaxis"
+        [xaxis]="OnlineOrderData.xaxis"
+        [colors]="OnlineOrderData.colors"
+        [dataLabels]="OnlineOrderData.dataLabels"
+        [legend]="OnlineOrderData.legend"
+      />
+    </div>
+  </div>
+</div>

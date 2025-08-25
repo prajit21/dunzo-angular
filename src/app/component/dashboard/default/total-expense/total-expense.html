@@ -1,0 +1,29 @@
+<div class="card total-earning">
+  <div class="card-body pb-0">
+    <div class="row">
+      <div class="col-sm-7 box-col-7">
+        <div class="d-flex">
+          <h3 class="font-primary">Total Expense</h3>
+        </div>
+        <h5>$4,683.90</h5>
+        <span>+ 10.34% than last week</span>
+      </div>
+      <div class="col-sm-5 box-col-5 p-0">
+        <div id="expense-chart">
+          <apx-chart
+            [series]="expenseChart.series"
+            [chart]="expenseChart.chart"
+            [fill]="expenseChart.fill"
+            [tooltip]="expenseChart.tooltip"
+            [grid]="expenseChart.grid"
+            [xaxis]="expenseChart.xaxis"
+            [yaxis]="expenseChart.yaxis"
+            [markers]="expenseChart.markers"
+            [stroke]="expenseChart.stroke"
+            [dataLabels]="expenseChart.dataLabels"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

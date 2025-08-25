@@ -1,0 +1,41 @@
+<div class="col-xl-12">
+  <div class="card categories-chart">
+    <div class="card-header pb-0">
+      <div class="header-top">
+        <h4>Sale Statistic</h4>
+        <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+          <button
+            class="btn dropdown-toggle"
+            id="userdropdown6"
+            type="button"
+            (click)="openMenu()"
+          >
+            <i class="icon-more-alt"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+            <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+            <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+            <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body p-0">
+      <div id="total-project">
+        <apx-chart
+          [series]="saleStatisticData.series"
+          [chart]="saleStatisticData.chart"
+          [grid]="saleStatisticData.grid"
+          [plotOptions]="saleStatisticData.plotOptions"
+          [legend]="saleStatisticData.legend"
+          [yaxis]="saleStatisticData.yaxis"
+          [xaxis]="saleStatisticData.xaxis"
+          [dataLabels]="saleStatisticData.dataLabels"
+          [colors]="saleStatisticData.colors"
+          [responsive]="saleStatisticData.responsive"
+          [fill]="saleStatisticData.fill"
+        />
+      </div>
+    </div>
+  </div>
+</div>

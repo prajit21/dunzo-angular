@@ -1,0 +1,34 @@
+<div class="card invoices">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Invoices</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="d-flex">
+      <div class="flex-shrink-0">
+        <h5>Due</h5>
+        <h3>$8,727</h3>
+      </div>
+      <div class="flex-grow-1">
+        <h5>Overdue</h5>
+        <h3>$8,727</h3>
+      </div>
+    </div>
+  </div>
+</div>

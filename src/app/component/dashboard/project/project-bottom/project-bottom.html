@@ -1,0 +1,40 @@
+<div class="row">
+  @for (data of Projectsdata; track data) {
+  <div class="col-xl-12">
+    <div class="card pending-project">
+      <div class="card-body">
+        <div class="d-flex">
+          <div class="flex-grow-1">
+            <a [routerLink]="['/project/list']">
+              <h4>{{ data.number }} Projects</h4>
+              <span>{{ data.status }} </span>
+            </a>
+            <p class="d-flex">
+              <span class="bg-light-{{ data.class2 }} me-2">
+                <svg class="stroke-icon">
+                  <use
+                    attr.xlink:href="assets/svg/icon-sprite.svg#{{ data.icon }}"
+                  ></use>
+                </svg>
+              </span>
+              <span class="font-{{ data.class2 }} me-2"
+                >{{ data.percentage }}</span
+              >
+              <span>Since last month</span>
+            </p>
+          </div>
+          <div class="flex-shrink-0">
+            <div class="bg-light-{{ data.class }}">
+              <svg class="stroke-icon">
+                <use
+                  attr.xlink:href="assets/svg/icon-sprite.svg#{{ data.icon2 }}"
+                ></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>

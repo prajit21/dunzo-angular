@@ -1,0 +1,63 @@
+<div class="card upcoming-launch">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Upcoming Launch App</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="meeting">
+      <div class="d-flex">
+        <h4>Dunzo App Launch</h4>
+        <span>11:30PM</span>
+      </div>
+      <p>
+        Anna Catmire is hosting a meeting for dunzo app launch. endeavour to be
+        there!
+      </p>
+      <div class="flex-shrink-0">
+        <a [routerLink]="['/todo']">
+          <div class="button btn btn-primary">Set Reminder</div>
+        </a>
+        <div class="user-details customers">
+          <ul>
+            <li class="d-inline-block">
+              <img src="assets/images/dashboard-3/user/11.png" alt="user" />
+            </li>
+            <li class="d-inline-block">
+              <img src="assets/images/dashboard-3/user/10.png" alt="user" />
+            </li>
+            <li class="d-inline-block">
+              <div class="light-card">
+                <span class="f-w-500">+9</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-12">
+  <div class="card design-card">
+    <div class="card-body">
+      <h5>WE ARE DESIGN AGENCY WORK WITH YOU</h5>
+      <p>Bringing Well-crafted design and scalable infrastructure.</p>
+      <a class="btn" [routerLink]="['/job/apply']">Hire Us</a>
+    </div>
+  </div>
+</div>

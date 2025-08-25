@@ -1,0 +1,55 @@
+<div class="card sales overview">
+  <div class="card-header card-no-border pb-0">
+    <div class="header-top">
+      <h4>Sales Overview</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body p-0">
+    <div class="sales-chart">
+      <div class="shap-2">
+        <div class="rounded-shap animate-bg-secondary"><i></i><i></i></div>
+      </div>
+      <div class="shap-2">
+        <div class="rounded-shap animate-bg-secondary"><i></i><i></i></div>
+      </div>
+      <div class="shap-2">
+        <div class="rounded-shap animate-bg-secondary"><i></i><i></i></div>
+      </div>
+      <div class="shap-2">
+        <div class="rounded-shap animate-bg-secondary"><i></i><i></i></div>
+      </div>
+      <div id="sales-overview">
+        <apx-chart
+          [series]="SalesoverViwechart.series"
+          [chart]="SalesoverViwechart.chart"
+          [stroke]="SalesoverViwechart.stroke"
+          [grid]="SalesoverViwechart.grid"
+          [labels]="SalesoverViwechart.labels"
+          [markers]="SalesoverViwechart.markers"
+          [tooltip]="SalesoverViwechart.tooltip"
+          [legend]="SalesoverViwechart.legend"
+          [colors]="SalesoverViwechart.colors"
+          [fill]="SalesoverViwechart.fill"
+          [xaxis]="SalesoverViwechart.xaxis"
+          [yaxis]="SalesoverViwechart.yaxis"
+          [responsive]="SalesoverViwechart.responsive"
+        />
+      </div>
+    </div>
+  </div>
+</div>

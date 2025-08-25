@@ -1,0 +1,61 @@
+<div class="col-xl-12 p-0 pe-30 ps-20">
+  <div class="card upcoming-project">
+    <div class="card-body">
+      <a [routerLink]="['/project/list']">
+        <div class="d-flex">
+          <h4>Upcoming Projects</h4>
+          <div class="flex-shrink-0">
+            <svg>
+              <use href="assets/svg/icon-sprite.svg#add"></use>
+            </svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+@for (data of UpcomingProjectsCards; track data) {
+<div class="col-xl-12 col-xl-100 p-0 pe-30 ps-20">
+  <div class="card redesign">
+    <div class="card-body">
+      <div class="header-top">
+        <h6 class="font-primary">{{ data.headtitle }}</h6>
+        <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+          <button
+            class="btn dropdown-toggle"
+            id="userdropdown6"
+            type="button"
+            (click)="openMenu()"
+          >
+            <i class="icon-more-alt"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+            <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+            <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+            <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+          </div>
+        </div>
+      </div>
+      <h5>{{ data.title }}</h5>
+      <div class="flex-shrink-0">
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#calendar"></use></svg
+        ><span>Created on {{ data.created }}</span>
+      </div>
+      <a [routerLink]="['/project/create']">
+        <div class="d-flex">
+          <div class="{{ data.class }}">
+            <svg>
+              <use href="assets/svg/icon-sprite.svg#timer"></use>
+            </svg>
+          </div>
+          <div class="flex-grow-1">
+            <span>Deadline</span>
+            <h6>{{ data.deadline }}</h6>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+}

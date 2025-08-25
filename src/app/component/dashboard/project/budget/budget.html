@@ -1,0 +1,64 @@
+<div class="card budget-card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Budget</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body pb-0">
+    <div class="budget-spent">
+      <span>Budget Spent</span>
+      <h2>$ 65,847.00</h2>
+    </div>
+    @for (data of budgetData; track data) {
+    <a [routerLink]="['/learning/learning-list']">
+      <div class="d-flex">
+        <div class="design-score bg-light-{{ data.class }}">
+          <svg class="stroke-icon">
+            <use
+              attr.xlink:href="assets/svg/icon-sprite.svg#{{ data.icon }}"
+            ></use>
+          </svg>
+        </div>
+        <div class="flex-grow-1">
+          <h6>{{ data.filed }}</h6>
+          <span>{{ data.amount }}</span>
+        </div>
+        <div class="flex-shrink-0">
+          <div class="design-menu"><i class="fa fa-angle-right"></i></div>
+        </div>
+      </div>
+    </a>
+    }
+  </div>
+  <div class="card-body p-0">
+    <div class="budget-chart" id="budget-chart">
+      <apx-chart
+        [series]="budgetChartData.series"
+        [chart]="budgetChartData.chart"
+        [grid]="budgetChartData.grid"
+        [fill]="budgetChartData.fill"
+        [markers]="budgetChartData.markers"
+        [dataLabels]="budgetChartData.dataLabels"
+        [yaxis]="budgetChartData.yaxis"
+        [xaxis]="budgetChartData.xaxis"
+        [colors]="budgetChartData.colors"
+        [stroke]="budgetChartData.stroke"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Recent Activity</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body recent-activity">
+    <ul>
+      <li class="mt-0 d-flex">
+        <div class="activity-line"></div>
+        <img src="assets/images/dashboard-2/user/5.png" alt="" />
+        <div class="ms-2">
+          <span>2hrs Ago</span>
+          <p>
+            Today, I'm very happy about myself, because I realized my dreams.
+          </p>
+          <div class="recent-images">
+            <ul>
+              <li>
+                <div class="recent-img-wrap">
+                  <img src="assets/images/dashboard-2/product/5.png" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="recent-img-wrap">
+                  <img src="assets/images/dashboard-2/product/6.png" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="recent-img-wrap">
+                  <img src="assets/images/dashboard-2/product/3.png" alt="" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="d-flex">
+        <img src="assets/images/dashboard-2/user/6.png" alt="" />
+        <div class="ms-2">
+          <span>5 hrs Ago</span>
+          <p>
+            That is the key of this collection, being yourself.Don't be into
+            trends.
+          </p>
+        </div>
+      </li>
+      <li class="d-flex align-items-baseline ms-3">
+        <div class="badge-dot-danger"></div>
+        <div class="ms-4"><span>25 Oct,2022</span></div>
+      </li>
+      <li class="d-flex">
+        <img src="assets/images/dashboard-2/user/7.png" alt="" />
+        <div class="ms-2">
+          <span>12 hrs Ago</span>
+          <p>
+            I am no longer concerned with sensation and innovation, but with the
+            perfection my style.
+          </p>
+        </div>
+      </li>
+      <li class="d-flex">
+        <img src="assets/images/dashboard-2/user/8.png" alt="" />
+        <div class="ms-2">
+          <span>12:00 pm</span>
+          <p>
+            You have added new product in Clothe text of the Printing and
+            tyesetting industry.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

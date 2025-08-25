@@ -1,0 +1,50 @@
+<div class="card sales">
+  <div class="card-header card-no-border pb-0">
+    <div class="header-top">
+      <h4>Sales Statistic</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div id="sales-chart">
+      <apx-chart
+        [series]="SalesData.series"
+        [chart]="SalesData.chart"
+        [grid]="SalesData.grid"
+        [responsive]="SalesData.responsive"
+        [plotOptions]="SalesData.plotOptions"
+        [dataLabels]="SalesData.dataLabels"
+        [legend]="SalesData.legend"
+        [colors]="SalesData.colors"
+      />
+    </div>
+    <div class="d-flex">
+      <div class="flex-shrink-0 me-2"><span class="bg-primary"></span></div>
+      <div class="flex-grow-1 me-2">
+        <h5>View Count <strong>340k</strong></h5>
+      </div>
+      <div class="flex-shrink-0 me-2">
+        <span class="bg-light-primary"></span>
+      </div>
+      <div class="flex-grow-1">
+        <h5>View Count <strong>340k</strong></h5>
+      </div>
+    </div>
+    <p>Keep up info updated to increase the number of ionteractions</p>
+    <button class="btn">See more</button>
+  </div>
+</div>

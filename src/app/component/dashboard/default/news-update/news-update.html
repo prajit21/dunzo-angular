@@ -1,0 +1,38 @@
+<div class="card news-update">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>News & Update</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    @for (Data of NewsData; track Data; let i = $index) {
+    <div class="d-flex align-items-center" [ngClass]="i === 0 ? 'pt-0' : ''">
+      <img src=" {{ Data.img }}" alt="" />
+      <div class="flex-grow-1 ms-3">
+        <a [routerLink]="['/social-app']">
+          <h5>{{ Data.des }}</h5>
+          <span>{{ Data.info }}</span>
+        </a>
+      </div>
+      <div class="flex-shrink-0">
+        <button class="btn">{{ Data.time }}</button>
+      </div>
+    </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="card discount-card">
+  <div class="card-body">
+    <owl-carousel-o [options]="SildesoptionsData">
+      @for (sildesItem of offerData; track sildesItem) {
+      <ng-template carouselSlide>
+        <div class="special-offer">
+          <div class="d-flex">
+            <div class="flex-shrink-0">
+              <h3>{{ sildesItem.productname }}</h3>
+              <h5>
+                {{ sildesItem.offerprice }}
+                <del>{{ sildesItem.price }}</del>
+              </h5>
+              <h6 class="bg-light">Special Discount</h6>
+              <p>
+                Deal of the Day From <span>{{ sildesItem.dealprice }}</span>
+              </p>
+              <ul>
+                <li>
+                  <h5>{{ sildesItem.days }}</h5>
+                  <span>Days</span>
+                </li>
+                <li>
+                  <h5>{{ sildesItem.hours }}</h5>
+                  <span>Hours</span>
+                </li>
+                <li>
+                  <h5>{{ sildesItem.min }}</h5>
+                  <span>Min</span>
+                </li>
+                <li>
+                  <h5>{{ sildesItem.sec }}</h5>
+                  <span>Sec</span>
+                </li>
+              </ul>
+            </div>
+            <img src="{{ sildesItem.img }}" alt="" />
+          </div>
+          <div class="product-slider">
+            <div class="shap-block">
+              <div class="rounded-shap animate-bg-secondary">
+                <i></i><i></i><i></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      }
+    </owl-carousel-o>
+  </div>
+</div>

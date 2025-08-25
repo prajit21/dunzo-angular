@@ -1,0 +1,64 @@
+<div class="card state">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h4>Sale Top Countries</h4>
+      <div class="dropdown icon-dropdown" (clickOutside)="clickOutside()">
+        <button
+          class="btn dropdown-toggle"
+          id="userdropdown6"
+          type="button"
+          (click)="openMenu()"
+        >
+          <i class="icon-more-alt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+          <a class="dropdown-item" href="javascript:void(0)">Weekly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Monthly</a>
+          <a class="dropdown-item" href="javascript:void(0)">Yearly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body mt-0">
+    <ul class="d-flex">
+      <li class="balance-card">
+        <div class="Countries">
+          <span class="rounded-pill"></span>
+          <h5>China</h5>
+        </div>
+        <h2 class="mt-1 mb-0">90%</h2>
+      </li>
+      <li class="balance-card">
+        <div class="Countries">
+          <span class="rounded-pill"></span>
+          <h5>Hong Kong</h5>
+        </div>
+        <h2 class="mt-1 mb-0">70%</h2>
+      </li>
+    </ul>
+    <ul class="d-flex mt-4">
+      <li class="balance-card">
+        <div class="Countries">
+          <span class="rounded-pill"></span>
+          <h5>Great Britain</h5>
+        </div>
+        <h2 class="mt-1 mb-0">60%</h2>
+      </li>
+      <li class="balance-card me-3">
+        <div class="Countries">
+          <span class="rounded-pill"></span>
+          <h5>Australia</h5>
+        </div>
+        <h2 class="mt-1 mb-0">50%</h2>
+      </li>
+    </ul>
+    <div class="col-xl-12 mt-4">
+      <div
+        class="jvector-map-height"
+        id="asia"
+        leaflet
+        [leafletOptions]="options1"
+      ></div>
+    </div>
+  </div>
+</div>

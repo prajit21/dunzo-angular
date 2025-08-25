@@ -1,0 +1,37 @@
+<div class="card mb-0 online-order">
+  <div class="card-header revenue-order pb-0">
+    <div class="d-flex">
+      <div class="order bg-light-danger">
+        <span></span>
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#increased"></use>
+        </svg>
+      </div>
+      <div class="arrow-chart">
+        <svg>
+          <use href="assets/svg/icon-sprite.svg#arrow-chart"></use></svg
+        ><span class="font-danger">-3.5%</span>
+      </div>
+    </div>
+    <div class="online">
+      <span>Total Revenue</span>
+      <h2>45,9561</h2>
+    </div>
+  </div>
+  <div class="card-body pt-0 ps-2 pe-2">
+    <div class="revenue" id="Revenue-chart">
+      <apx-chart
+        [series]="TotalRevenueData.series"
+        [chart]="TotalRevenueData.chart"
+        [fill]="TotalRevenueData.fill"
+        [markers]="TotalRevenueData.markers"
+        [yaxis]="TotalRevenueData.yaxis"
+        [xaxis]="TotalRevenueData.xaxis"
+        [grid]="TotalRevenueData.grid"
+        [dataLabels]="TotalRevenueData.dataLabels"
+        [colors]="TotalRevenueData.colors"
+        [stroke]="TotalRevenueData.stroke"
+      />
+    </div>
+  </div>
+</div>

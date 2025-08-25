@@ -1,0 +1,26 @@
+<div class="card total-earning">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-7 box-col-7">
+        <div class="d-flex">
+          <h3 class="font-primary">Total Earning</h3>
+        </div>
+        <h5>$20.790</h5>
+        <span>+ 16.06% than last week</span>
+      </div>
+      <div class="col-sm-5 box-col-5 p-0">
+        <div id="income-chart">
+          <apx-chart
+            [series]="EarningChart.series"
+            [chart]="EarningChart.chart"
+            [stroke]="EarningChart.stroke"
+            [plotOptions]="EarningChart.plotOptions"
+            [dataLabels]="EarningChart.dataLabels"
+            [colors]="EarningChart.colors"
+            [responsive]="EarningChart.responsive"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-import { NgStyle, NgTemplateOutlet, NgClass } from "@angular/common";
+import { NgTemplateOutlet, NgClass } from "@angular/common";
 import { Component, HostListener, inject } from "@angular/core";
 import {
   NavigationEnd,
@@ -21,12 +21,11 @@ import { SvgIcon } from "../svg-icon/svg-icon";
   imports: [
     RouterLink,
     Feathericon,
-    NgStyle,
     NgTemplateOutlet,
-    NgClass,
     RouterLinkActive,
     SvgIcon,
     TranslateModule,
+    NgClass,
   ],
 })
 export class Sidebar {
@@ -103,9 +102,9 @@ export class Sidebar {
     });
   }
 
-  @HostListener("window:resize", ["$event"])
-  onResize(event: { target: { innerWidth: number } }) {
-    this.width = event.target.innerWidth - 500;
+  @HostListener("window:resize")
+  onResize() {
+    this.width = window.innerWidth - 500;
   }
 
   openMenu() {

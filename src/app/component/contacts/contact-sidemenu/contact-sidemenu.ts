@@ -1,4 +1,4 @@
-import { Component, Output, SimpleChanges, inject } from "@angular/core";
+import { Component, SimpleChanges, inject } from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -16,11 +16,10 @@ import { Personal } from "../personal/personal";
 })
 export class ContactSidemenu {
   private modalService = inject(NgbModal);
-
-  @Output() selectedId: number;
-  @Output() statusData: boolean;
-  @Output() getTitleData: string;
-  @Output() titleData: string;
+  selectedId!: number;
+  statusData!: boolean;
+  getTitleData!: string;
+  titleData!: string;
 
   public Personal = data.Personal;
   public organization = data.Organization;

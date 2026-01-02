@@ -55,7 +55,7 @@ export class DatatableOrderhistory {
   onSort({ column, direction }: SortEvent) {
     this.headers().forEach((header) => {
       if (header.sortableOrder() !== column) {
-        header.direction = "";
+        header.currentDirection.set("");
       }
     });
     this.service.sortColumn = column;

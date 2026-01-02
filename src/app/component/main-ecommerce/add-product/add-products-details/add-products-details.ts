@@ -1,4 +1,3 @@
-import { NgClass } from "@angular/common";
 import { Component, output } from "@angular/core";
 import {
   FormControl,
@@ -14,7 +13,7 @@ import { AngularEditorModule } from "@kolkov/angular-editor";
   selector: "app-add-products-details",
   templateUrl: "./add-products-details.html",
   styleUrls: ["./add-products-details.scss"],
-  imports: [FormsModule, ReactiveFormsModule, NgClass, AngularEditorModule],
+  imports: [FormsModule, ReactiveFormsModule, AngularEditorModule],
 })
 export class AddProductsDetails {
   public validate: boolean = false;

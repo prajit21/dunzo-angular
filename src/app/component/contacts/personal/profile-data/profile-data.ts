@@ -1,4 +1,3 @@
-import { NgStyle } from "@angular/common";
 import {
   Component,
   Input,
@@ -26,14 +25,7 @@ import { Print } from "../../contact-modal/print/print";
   selector: "app-profile-data",
   templateUrl: "./profile-data.html",
   styleUrls: ["./profile-data.scss"],
-  imports: [
-    NgStyle,
-    FormsModule,
-    General,
-    PersonalContent,
-    AddressContent,
-    Print,
-  ],
+  imports: [FormsModule, General, PersonalContent, AddressContent, Print],
 })
 export class ProfileData {
   private modalService = inject(NgbModal);

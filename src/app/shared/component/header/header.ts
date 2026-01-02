@@ -1,4 +1,4 @@
-import { NgClass, NgStyle, SlicePipe } from "@angular/common";
+import { NgClass, SlicePipe } from "@angular/common";
 import { Component, HostListener, inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterLink } from "@angular/router";
@@ -23,7 +23,6 @@ import { Theme } from "./theme/theme";
   styleUrls: ["./header.scss"],
   imports: [
     NgClass,
-    NgStyle,
     RouterLink,
     HorizontalHeader,
     ClickOutsideDirective,
@@ -58,10 +57,9 @@ export class Header {
   openMenu() {
     this.navmenu.isDisplay = !this.navmenu.isDisplay;
   }
-
-  @HostListener("window:resize", ["$event"])
-  onResize(_event: number) {
-    this.navmenu.isDisplay = window.innerWidth < 1200 ? true : false;
+  @HostListener("window:resize")
+  onResize() {
+    this.navmenu.isDisplay = window.innerWidth < 1200;
   }
 
   openSearch() {

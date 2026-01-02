@@ -11,7 +11,7 @@ import { ConfigData, LayoutService } from "../../services/layout.service";
   selector: "app-customizer",
   templateUrl: "./customizer.html",
   styleUrls: ["./customizer.scss"],
-  imports: [NgClass, QuickOption, ColorPicker],
+  imports: [QuickOption, ColorPicker, NgClass],
 })
 export class Customizer {
   private modalService = inject(NgbModal);
@@ -26,9 +26,9 @@ export class Customizer {
   public primary_color: string = "#307EF3";
   public secondary_color: string = "#EBA31D";
 
-  @HostListener("window:resize", ["$event"])
-  onResize(event: { target: { innerWidth: number } }) {
-    this.screenwidth = event.target.innerWidth;
+  @HostListener("window:resize")
+  onResize() {
+    this.screenwidth = window.innerWidth;
   }
 
   Customizer(val: string) {

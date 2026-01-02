@@ -1,4 +1,3 @@
-import { NgClass } from "@angular/common";
 import { Component, TemplateRef, inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -8,7 +7,7 @@ import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-open-modal-dunzo",
   templateUrl: "./open-modal-dunzo.html",
   styleUrls: ["./open-modal-dunzo.scss"],
-  imports: [FormsModule, NgClass],
+  imports: [FormsModule],
 })
 export class OpenModalDunzo {
   private modalService = inject(NgbModal);

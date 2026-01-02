@@ -1,4 +1,3 @@
-import { NgClass } from "@angular/common";
 import { Component, HostListener, inject } from "@angular/core";
 
 import { LayoutService } from "../../../services/layout.service";
@@ -7,7 +6,6 @@ import { LayoutService } from "../../../services/layout.service";
   selector: "app-quick-option",
   templateUrl: "./quick-option.html",
   styleUrls: ["./quick-option.scss"],
-  imports: [NgClass],
 })
 export class QuickOption {
   layout = inject(LayoutService);

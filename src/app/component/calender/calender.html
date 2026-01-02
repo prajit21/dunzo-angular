@@ -58,9 +58,9 @@
   </div>
 </div>
 <br />
-<div [ngSwitch]="view">
+<div>
+  @switch (view) { @case (CalendarView.Month) {
   <mwl-calendar-month-view
-    *ngSwitchCase="CalendarView.Month"
     [viewDate]="viewDate"
     [events]="events"
     [refresh]="refresh"
@@ -69,22 +69,23 @@
     (eventClicked)="handleEvent('Clicked', $event.event)"
     (eventTimesChanged)="eventTimesChanged($event)"
   />
+  } @case (CalendarView.Week) {
   <mwl-calendar-week-view
-    *ngSwitchCase="CalendarView.Week"
     [viewDate]="viewDate"
     [events]="events"
     [refresh]="refresh"
     (eventClicked)="handleEvent('Clicked', $event.event)"
     (eventTimesChanged)="eventTimesChanged($event)"
   />
+  } @case (CalendarView.Day) {
   <mwl-calendar-day-view
-    *ngSwitchCase="CalendarView.Day"
     [viewDate]="viewDate"
     [events]="events"
     [refresh]="refresh"
     (eventClicked)="handleEvent('Clicked', $event.event)"
     (eventTimesChanged)="eventTimesChanged($event)"
   />
+  } }
 </div>
 <br /><br /><br />
 <h3>

@@ -1,4 +1,4 @@
-import { JsonPipe, NgSwitch, NgSwitchCase } from "@angular/common";
+import { JsonPipe } from "@angular/common";
 import { Component, TemplateRef, inject, viewChild } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -48,8 +48,6 @@ const colors: Record<string, EventColor> = {
   styleUrls: ["./calender.scss"],
   imports: [
     CalendarCommonModule,
-    NgSwitch,
-    NgSwitchCase,
     CalendarMonthModule,
     CalendarWeekModule,
     CalendarDayModule,

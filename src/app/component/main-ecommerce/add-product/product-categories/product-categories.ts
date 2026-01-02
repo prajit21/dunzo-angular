@@ -1,4 +1,3 @@
-import { NgClass } from "@angular/common";
 import { Component, inject, output } from "@angular/core";
 import {
   FormControl,
@@ -17,7 +16,7 @@ import { NewCategories } from "./new-categories/new-categories";
   selector: "app-product-categories",
   templateUrl: "./product-categories.html",
   styleUrls: ["./product-categories.scss"],
-  imports: [FormsModule, ReactiveFormsModule, NgClass, TagInputModule],
+  imports: [FormsModule, ReactiveFormsModule, TagInputModule],
 })
 export class ProductCategories {
   private modalService = inject(NgbModal);

@@ -1,4 +1,3 @@
-import { NgClass } from "@angular/common";
 import { Component, output } from "@angular/core";
 import {
   FormControl,
@@ -12,7 +11,7 @@ import {
   selector: "app-selling-price",
   templateUrl: "./selling-price.html",
   styleUrls: ["./selling-price.scss"],
-  imports: [FormsModule, ReactiveFormsModule, NgClass],
+  imports: [FormsModule, ReactiveFormsModule],
 })
 export class SellingPrice {
   readonly activeSteps = output<number>();

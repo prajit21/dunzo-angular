@@ -1,4 +1,3 @@
-import { NgClass } from "@angular/common";
 import { Component, SimpleChanges, inject } from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
@@ -13,7 +12,7 @@ import { LetterboxUser } from "../letterbox-user/letterbox-user";
   selector: "app-letterbox-sidebar",
   templateUrl: "./letterbox-sidebar.html",
   styleUrls: ["./letterbox-sidebar.scss"],
-  imports: [ClickOutsideDirective, NgClass, LetterboxUser],
+  imports: [ClickOutsideDirective, LetterboxUser],
 })
 export class LetterboxSidebar {
   private modalService = inject(NgbModal);

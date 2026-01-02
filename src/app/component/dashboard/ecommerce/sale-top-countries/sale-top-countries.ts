@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { HttpClient } from "@angular/common/http";
 import { Component, inject } from "@angular/core";
 
@@ -11,7 +10,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-sale-top-countries",
   templateUrl: "./sale-top-countries.html",
   styleUrls: ["./sale-top-countries.scss"],
-  imports: [CommonModule, LeafletModule, ClickOutsideDirective],
+  imports: [LeafletModule, ClickOutsideDirective],
 })
 export class SaleTopCountries {
   private http = inject(HttpClient);

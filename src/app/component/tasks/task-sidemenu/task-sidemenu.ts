@@ -1,4 +1,4 @@
-import { Component, Output, inject } from "@angular/core";
+import { Component, inject } from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -18,8 +18,8 @@ import { NewTasks } from "../tasks-modal/new-tasks/new-tasks";
 export class TaskSidemenu {
   private modalService = inject(NgbModal);
 
-  @Output() selectedheading_id: number;
-  @Output() selectedTagId: number;
+  selectedheading_id: number;
+  selectedTagId: number;
   public taskSidemenu = Data.TaskData;
   public taskTagSidemenu = Data.TagData;
   public open: boolean = false;

@@ -1,4 +1,3 @@
-import { NgClass } from "@angular/common";
 import { Component, inject } from "@angular/core";
 import {
   FormControl,
@@ -14,7 +13,7 @@ import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-new-contact",
   templateUrl: "./new-contact.html",
   styleUrls: ["./new-contact.scss"],
-  imports: [FormsModule, NgClass, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule],
 })
 export class NewContact {
   activeModal = inject(NgbActiveModal);

@@ -8,10 +8,10 @@
   [ngClass]="layout.config.settings.sidebar_type"
 >
   <app-header />
-  <div class="page-body-wrapper" [ngClass]="{ scorlled: hidenav.show }">
+  <div class="page-body-wrapper" [class.scorlled]="hidenav.show">
     <div
       class="sidebar-wrapper"
-      [ngClass]="{ close_icon: navmenu.isDisplay }"
+      [class.close_icon]="navmenu.isDisplay"
       [attr.data-layout]="layout.config.settings.icon"
     >
       <app-sidebar />

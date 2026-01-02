@@ -16,13 +16,13 @@ import { Sidebar } from "../../sidebar/sidebar";
   templateUrl: "./content.html",
   styleUrls: ["./content.scss"],
   imports: [
-    NgClass,
     Header,
     Sidebar,
     Breadcrumb,
     RouterOutlet,
     Footer,
     Customizer,
+    NgClass,
   ],
 })
 export class Content {
@@ -33,10 +33,13 @@ export class Content {
 
   public innerWidth: number;
 
-  @HostListener("window:resize", ["$event"])
-  onResize(_event: number) {
-    this.navmenu.isDisplay = window.innerWidth < 1200 ? true : false;
-    if (window.innerWidth < 1200) {
+  @HostListener("window:resize")
+  onResize() {
+    const isMobile = window.innerWidth < 1200;
+
+    this.navmenu.isDisplay = isMobile;
+
+    if (isMobile) {
       this.layout.config.settings.sidebar_type = "compact-wrapper";
     }
   }

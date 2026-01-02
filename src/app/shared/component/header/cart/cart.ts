@@ -1,4 +1,3 @@
-import { NgClass } from "@angular/common";
 import { Component } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
@@ -6,7 +5,7 @@ import { RouterLink } from "@angular/router";
   selector: "app-cart",
   templateUrl: "./cart.html",
   styleUrls: ["./cart.scss"],
-  imports: [NgClass, RouterLink],
+  imports: [RouterLink],
 })
 export class Cart {
   public products: boolean = false;

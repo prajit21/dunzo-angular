@@ -25,10 +25,7 @@
     </div>
     <div
       id="sidebar-menu"
-      [ngStyle]="{
-        marginLeft:
-          this.layout.config.settings.sidebar_type === 'horizontal-wrapper' ? margin + 'px' : '0px',
-      }"
+      [style.marginLeft]="this.layout.config.settings.sidebar_type === 'horizontal-wrapper' ? margin + 'px' : '0px'"
     >
       <ul
         class="sidebar-links custom-scrollbar d-flex flex-column"
@@ -58,7 +55,7 @@
         <ng-template #recursiveMenu let-menuItems>
           @for (item of menuItems; track item) {
           <li
-            [ngClass]="{
+            [class]="{
                 'sidebar-list': item.level === 1,
                 'sidebar-main-title': item.headTitle1,
               }"

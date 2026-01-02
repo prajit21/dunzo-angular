@@ -1,4 +1,4 @@
-import { AsyncPipe, CommonModule, DecimalPipe, NgClass } from "@angular/common";
+import { AsyncPipe, DecimalPipe, NgClass } from "@angular/common";
 import { Component, inject, viewChildren } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -20,9 +20,11 @@ import { SupportTicketService } from "../../../shared/services/support-ticket.se
     FormsModule,
     NgbdSortableHeaderDirective2Directive,
     NgClass,
-    CommonModule,
     NgbPagination,
     AsyncPipe,
+    AsyncPipe,
+    DecimalPipe,
+    NgClass,
   ],
   providers: [SupportTicketService, DecimalPipe],
 })
@@ -51,7 +53,7 @@ export class SupportTicketDataTable {
   onSort({ column, direction }: SortEvent) {
     this.headers().forEach((header) => {
       if (header.sortable() !== column) {
-        header.direction = "";
+        header.currentDirection.set("");
       }
     });
 

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgApexchartsModule } from "ng-apexcharts";
 
@@ -8,6 +8,7 @@ import { OnlineOrderChart } from "../../../../../shared/data/dashboard/E-commerc
   selector: "app-online-order",
   templateUrl: "./online-order.html",
   styleUrls: ["./online-order.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgApexchartsModule],
 })
 export class OnlineOrder {

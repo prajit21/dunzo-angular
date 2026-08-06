@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ProjectcommonData } from "../../../../shared/data/dashboard/project/project";
 import { ClickOutsideDirective } from "../../../../shared/directives/outside.directive";
@@ -7,6 +7,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-top-common-project",
   templateUrl: "./top-common-project.html",
   styleUrls: ["./top-common-project.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective],
 })
 export class TopCommonProject {

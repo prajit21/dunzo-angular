@@ -1,4 +1,10 @@
-import { Component, TemplateRef, inject, viewChild } from "@angular/core";
+import {
+  Component,
+  TemplateRef,
+  inject,
+  viewChild,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { ModalDismissReasons, NgbModal } from "@ng-bootstrap/ng-bootstrap";
@@ -12,6 +18,7 @@ import {
   selector: "app-edit-bookmark",
   templateUrl: "./edit-bookmark.html",
   styleUrls: ["./edit-bookmark.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule],
 })
 export class EditBookmark {

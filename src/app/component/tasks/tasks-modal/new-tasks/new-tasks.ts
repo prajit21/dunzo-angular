@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -6,6 +6,7 @@ import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-new-tasks",
   templateUrl: "./new-tasks.html",
   styleUrls: ["./new-tasks.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class NewTasks {

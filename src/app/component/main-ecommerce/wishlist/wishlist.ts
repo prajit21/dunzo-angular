@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { whislist } from "../../../shared/data/main-ecommerce/wishlist";
@@ -7,6 +7,7 @@ import { whislist } from "../../../shared/data/main-ecommerce/wishlist";
   selector: "app-wishlist",
   templateUrl: "./wishlist.html",
   styleUrls: ["./wishlist.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink],
 })
 export class Wishlist {

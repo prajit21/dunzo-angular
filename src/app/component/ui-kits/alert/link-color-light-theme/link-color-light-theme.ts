@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { lightThemeAlert } from "../../../../shared/data/ui-kits/alert/alert";
 
@@ -6,6 +6,7 @@ import { lightThemeAlert } from "../../../../shared/data/ui-kits/alert/alert";
   selector: "app-link-color-light-theme",
   templateUrl: "./link-color-light-theme.html",
   styleUrls: ["./link-color-light-theme.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class LinkColorLightTheme {

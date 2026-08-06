@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { AngularEditorModule } from "@kolkov/angular-editor";
@@ -8,6 +8,7 @@ import { NgxPrintDirective } from "ngx-print";
   selector: "app-user-details",
   templateUrl: "./user-details.html",
   styleUrls: ["./user-details.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgxPrintDirective, AngularEditorModule, FormsModule],
 })
 export class UserDetails {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { PersonalDetails } from "./personal-details/personal-details";
 import { UploadFiles } from "./upload-files/upload-files";
@@ -9,6 +9,7 @@ import { YourExprience } from "./your-exprience/your-exprience";
   selector: "app-apply-form",
   templateUrl: "./apply-form.html",
   styleUrls: ["./apply-form.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [PersonalDetails, YourEduction, YourExprience, UploadFiles],
 })
 export class ApplyForm {}

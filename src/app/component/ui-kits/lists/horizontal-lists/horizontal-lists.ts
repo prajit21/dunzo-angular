@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { HorizontalList } from "../../../../shared/data/ui-kits/lists/lists";
 
@@ -6,6 +6,7 @@ import { HorizontalList } from "../../../../shared/data/ui-kits/lists/lists";
   selector: "app-horizontal-lists",
   templateUrl: "./horizontal-lists.html",
   styleUrls: ["./horizontal-lists.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class HorizontalLists {

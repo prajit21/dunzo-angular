@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Blockquotes } from "./blockquotes/blockquotes";
 import { ColoredHeadings } from "./colored-headings/colored-headings";
@@ -13,6 +13,7 @@ import { TextColor } from "./text-color/text-color";
   selector: "app-typography",
   templateUrl: "./typography.html",
   styleUrls: ["./typography.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     Headings,
     ColoredHeadings,

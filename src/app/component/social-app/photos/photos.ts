@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { GallerizeDirective } from "ng-gallery/lightbox";
 
@@ -8,6 +8,7 @@ import * as Data from "../../../shared/data/social-media/social-media-data";
   selector: "app-photos",
   templateUrl: "./photos.html",
   styleUrls: ["./photos.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [GallerizeDirective],
 })
 export class Photos {

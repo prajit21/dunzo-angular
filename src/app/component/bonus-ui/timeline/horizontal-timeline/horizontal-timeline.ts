@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { horizontalTimeline } from "../../../../shared/data/bonus-ui/timeline";
 
@@ -6,6 +6,7 @@ import { horizontalTimeline } from "../../../../shared/data/bonus-ui/timeline";
   selector: "app-horizontal-timeline",
   templateUrl: "./horizontal-timeline.html",
   styleUrls: ["./horizontal-timeline.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class HorizontalTimeline {

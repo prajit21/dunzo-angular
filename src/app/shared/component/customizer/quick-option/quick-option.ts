@@ -1,10 +1,16 @@
-import { Component, HostListener, inject } from "@angular/core";
+import {
+  Component,
+  HostListener,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { LayoutService } from "../../../services/layout.service";
 
 @Component({
   selector: "app-quick-option",
   templateUrl: "./quick-option.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ["./quick-option.scss"],
 })
 export class QuickOption {

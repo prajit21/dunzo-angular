@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { GridColumn } from "./grid-column/grid-column";
 import { GridOptions } from "./grid-options/grid-options";
@@ -12,6 +12,7 @@ import { VerticalAlignment } from "./vertical-alignment/vertical-alignment";
   selector: "app-grid",
   templateUrl: "./grid.html",
   styleUrls: ["./grid.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     GridOptions,
     GridColumn,

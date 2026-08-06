@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { Feedback } from "./feedback/feedback";
@@ -10,6 +10,7 @@ import { TotalRevenue } from "./total-revenue/total-revenue";
   selector: "app-top-ecommerce",
   templateUrl: "./top-ecommerce.html",
   styleUrls: ["./top-ecommerce.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [OnlineOrder, OfflineOrder, TotalRevenue, Feedback, RouterLink],
 })
 export class TopEcommerce {}

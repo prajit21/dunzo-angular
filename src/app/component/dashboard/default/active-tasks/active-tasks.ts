@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import {
@@ -12,6 +12,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-active-tasks",
   templateUrl: "./active-tasks.html",
   styleUrls: ["./active-tasks.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective, NgClass, RouterLink],
 })
 export class ActiveTasks {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { bordericons } from "../../../../../shared/data/forms/forms-widgets/switch";
 
@@ -6,6 +6,7 @@ import { bordericons } from "../../../../../shared/data/forms/forms-widgets/swit
   selector: "app-borders-with-icons",
   templateUrl: "./borders-with-icons.html",
   styleUrls: ["./borders-with-icons.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class BordersWithIcons {

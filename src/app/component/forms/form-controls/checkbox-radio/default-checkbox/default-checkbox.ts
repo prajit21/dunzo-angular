@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { checkbox } from "../../../../../shared/data/forms/form-controls/checkbox-radio";
 
@@ -6,6 +6,7 @@ import { checkbox } from "../../../../../shared/data/forms/form-controls/checkbo
   selector: "app-default-checkbox",
   templateUrl: "./default-checkbox.html",
   styleUrls: ["./default-checkbox.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class DefaultCheckbox {

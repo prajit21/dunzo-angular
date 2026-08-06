@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { massage } from "../../../../shared/data/chat/chat";
 import { ClickOutsideDirective } from "../../../../shared/directives/outside.directive";
@@ -7,6 +7,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-user-chat",
   templateUrl: "./user-chat.html",
   styleUrls: ["./user-chat.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective],
 })
 export class UserChat {

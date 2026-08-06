@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbAccordionDirective,
@@ -15,6 +15,7 @@ import {
   selector: "app-my-profile",
   templateUrl: "./my-profile.html",
   styleUrls: ["./my-profile.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbAccordionDirective,
     NgbAccordionItem,

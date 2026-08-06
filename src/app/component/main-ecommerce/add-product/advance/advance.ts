@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component, output } from "@angular/core";
+import { Component, output, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { AdditionalOptions } from "./additional-options/additional-options";
@@ -10,6 +10,7 @@ import { Shipping } from "./shipping/shipping";
   selector: "app-advance",
   templateUrl: "./advance.html",
   styleUrls: ["./advance.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgClass, FormsModule, Inventory, AdditionalOptions, Shipping],
 })
 export class Advance {

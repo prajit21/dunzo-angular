@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbNav,
@@ -20,6 +20,7 @@ import {
   selector: "app-material-style-tabs",
   templateUrl: "./material-style-tabs.html",
   styleUrls: ["./material-style-tabs.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbNav,
     NgbNavItem,

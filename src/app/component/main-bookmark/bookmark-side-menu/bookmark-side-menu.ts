@@ -1,4 +1,9 @@
-import { Component, Output, inject } from "@angular/core";
+import {
+  Component,
+  Output,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -16,6 +21,7 @@ import { NewBookmark } from "../bookmark-modal/new-bookmark/new-bookmark";
   selector: "app-bookmark-side-menu",
   templateUrl: "./bookmark-side-menu.html",
   styleUrls: ["./bookmark-side-menu.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective, Feathericon, BookmarkData],
 })
 export class BookmarkSideMenu {

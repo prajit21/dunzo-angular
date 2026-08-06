@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbNav,
@@ -13,6 +13,7 @@ import {
   selector: "app-java-script-behavior",
   templateUrl: "./java-script-behavior.html",
   styleUrls: ["./java-script-behavior.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbNav,
     NgbNavItem,

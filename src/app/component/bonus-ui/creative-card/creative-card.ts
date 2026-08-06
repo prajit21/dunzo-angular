@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { BorderPrimaryState } from "./border-primary-state/border-primary-state";
 import { BorderSecondaryState } from "./border-secondary-state/border-secondary-state";
@@ -10,6 +10,7 @@ import { CommonBorderCard } from "./common-border-card/common-border-card";
   selector: "app-creative-card",
   templateUrl: "./creative-card.html",
   styleUrls: ["./creative-card.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     CommonBorderCard,
     BorderPrimaryState,

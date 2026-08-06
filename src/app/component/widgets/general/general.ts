@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { GeneralTrading } from "./general-trading/general-trading";
 import { ActiveTasks } from "../../dashboard/default/active-tasks/active-tasks";
@@ -19,6 +19,7 @@ import { TopCommonProject } from "../../dashboard/project/top-common-project/top
   selector: "app-general",
   templateUrl: "./general.html",
   styleUrls: ["./general.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     TopCommonProject,
     CategoriesSales,

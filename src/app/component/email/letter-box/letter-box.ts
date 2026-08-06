@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { LetterboxSidebar } from "./letterbox-sidebar/letterbox-sidebar";
 
@@ -6,6 +6,7 @@ import { LetterboxSidebar } from "./letterbox-sidebar/letterbox-sidebar";
   selector: "app-letter-box",
   templateUrl: "./letter-box.html",
   styleUrls: ["./letter-box.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [LetterboxSidebar],
 })
 export class LetterBox {}

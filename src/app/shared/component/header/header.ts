@@ -1,5 +1,10 @@
 import { NgClass, SlicePipe } from "@angular/common";
-import { Component, HostListener, inject } from "@angular/core";
+import {
+  Component,
+  HostListener,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterLink } from "@angular/router";
 
@@ -21,6 +26,7 @@ import { Theme } from "./theme/theme";
   selector: "app-header",
   templateUrl: "./header.html",
   styleUrls: ["./header.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgClass,
     RouterLink,

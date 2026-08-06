@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import * as data from "../../../shared/data/user/users-card";
@@ -7,6 +7,7 @@ import * as data from "../../../shared/data/user/users-card";
   selector: "app-friends",
   templateUrl: "./friends.html",
   styleUrls: ["./friends.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink],
 })
 export class Friends {

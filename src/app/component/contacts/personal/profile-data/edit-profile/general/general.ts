@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import * as data from "../../../../../../shared/data/contacts/all-contact";
@@ -7,6 +7,7 @@ import * as data from "../../../../../../shared/data/contacts/all-contact";
   selector: "app-general",
   templateUrl: "./general.html",
   styleUrls: ["./general.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule],
 })
 export class General {

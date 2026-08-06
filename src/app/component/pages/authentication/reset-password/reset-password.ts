@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterLink } from "@angular/router";
 
@@ -6,6 +6,7 @@ import { RouterLink } from "@angular/router";
   selector: "app-reset-password",
   templateUrl: "./reset-password.html",
   styleUrls: ["./reset-password.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink, FormsModule],
 })
 export class ResetPassword {

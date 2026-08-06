@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Touchspin } from "../../../../../shared/data/forms/forms-widgets/touchspin";
 
@@ -6,6 +6,7 @@ import { Touchspin } from "../../../../../shared/data/forms/forms-widgets/touchs
   selector: "app-default-touchspin",
   templateUrl: "./default-touchspin.html",
   styleUrls: ["./default-touchspin.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class DefaultTouchspin {

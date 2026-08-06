@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ActiveDisabled } from "./active-disabled/active-disabled";
 import { AlignmentPagination } from "./alignment-pagination/alignment-pagination";
@@ -11,6 +11,7 @@ import { SizingPagination } from "./sizing-pagination/sizing-pagination";
   selector: "app-pagination",
   templateUrl: "./pagination.html",
   styleUrls: ["./pagination.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     DefaultPagination,
     ActiveDisabled,

@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import { titleData } from "../../../../../shared/data/ui-kits/helper-classes/helper-classes";
 
@@ -6,6 +6,7 @@ import { titleData } from "../../../../../shared/data/ui-kits/helper-classes/hel
   selector: "app-common-border-displays",
   templateUrl: "./common-border-displays.html",
   styleUrls: ["./common-border-displays.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class CommonBorderDisplays {

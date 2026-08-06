@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { NgApexchartsModule } from "ng-apexcharts";
@@ -11,6 +11,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-budget",
   templateUrl: "./budget.html",
   styleUrls: ["./budget.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective, RouterLink, NgApexchartsModule],
 })
 export class Budget {

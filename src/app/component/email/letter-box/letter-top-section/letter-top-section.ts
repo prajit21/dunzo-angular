@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbNav,
@@ -14,6 +14,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-letter-top-section",
   templateUrl: "./letter-top-section.html",
   styleUrls: ["./letter-top-section.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbNav,
     NgbNavItem,

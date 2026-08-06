@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CommonBorderStyle } from "./common-border-style/common-border-style";
 import * as borderData from "../../../../shared/data/ui-kits/helper-classes/helper-classes";
@@ -7,6 +7,7 @@ import * as borderData from "../../../../shared/data/ui-kits/helper-classes/help
   selector: "app-border-stryle",
   templateUrl: "./border-stryle.html",
   styleUrls: ["./border-stryle.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonBorderStyle],
 })
 export class BorderStryle {

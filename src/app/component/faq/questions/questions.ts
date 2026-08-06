@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbAccordionConfig,
@@ -19,6 +19,7 @@ import { questionData } from "../../../shared/data/faq/faq";
   selector: "app-questions",
   templateUrl: "./questions.html",
   styleUrls: ["./questions.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbAccordionDirective,
     NgbAccordionItem,

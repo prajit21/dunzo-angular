@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { DefaultList } from "../../../../shared/data/ui-kits/lists/lists";
 
@@ -6,6 +6,7 @@ import { DefaultList } from "../../../../shared/data/ui-kits/lists/lists";
   selector: "app-default-lists",
   templateUrl: "./default-lists.html",
   styleUrls: ["./default-lists.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class DefaultLists {

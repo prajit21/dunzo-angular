@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbCollapse } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +8,7 @@ import { Category } from "../../../../shared/data/learning/learning";
   selector: "app-categories",
   templateUrl: "./categories.html",
   styleUrls: ["./categories.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgbCollapse],
 })
 export class Categories {

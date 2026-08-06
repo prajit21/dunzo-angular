@@ -1,9 +1,10 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
   selector: "app-icons-with-prefix-postfix",
   templateUrl: "./icons-with-prefix-postfix.html",
   styleUrls: ["./icons-with-prefix-postfix.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class IconsWithPrefixPostfix {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { TextsColors } from "../../../../shared/data/ui-kits/helper-classes/helper-classes";
 
@@ -6,6 +6,7 @@ import { TextsColors } from "../../../../shared/data/ui-kits/helper-classes/help
   selector: "app-text-colors",
   templateUrl: "./text-colors.html",
   styleUrls: ["./text-colors.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class TextColors {

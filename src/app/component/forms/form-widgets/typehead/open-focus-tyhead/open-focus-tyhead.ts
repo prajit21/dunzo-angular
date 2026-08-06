@@ -1,4 +1,4 @@
-import { Component, viewChild } from "@angular/core";
+import { Component, viewChild, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbTypeahead } from "@ng-bootstrap/ng-bootstrap";
@@ -76,6 +76,7 @@ const states = [
   selector: "app-open-focus-tyhead",
   templateUrl: "./open-focus-tyhead.html",
   styleUrls: ["./open-focus-tyhead.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, NgbTypeahead],
 })
 export class OpenFocusTyhead {

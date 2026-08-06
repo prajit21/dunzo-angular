@@ -5,6 +5,7 @@ import {
   inject,
   input,
   viewChild,
+  ChangeDetectionStrategy,
 } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -25,6 +26,7 @@ import { Print } from "../../contact-modal/print/print";
   selector: "app-profile-data",
   templateUrl: "./profile-data.html",
   styleUrls: ["./profile-data.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, General, PersonalContent, AddressContent, Print],
 })
 export class ProfileData {

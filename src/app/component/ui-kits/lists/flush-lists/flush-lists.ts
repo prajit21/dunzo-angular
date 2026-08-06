@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { FlushList } from "../../../../shared/data/ui-kits/lists/lists";
 
@@ -6,6 +6,7 @@ import { FlushList } from "../../../../shared/data/ui-kits/lists/lists";
   selector: "app-flush-lists",
   templateUrl: "./flush-lists.html",
   styleUrls: ["./flush-lists.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class FlushLists {

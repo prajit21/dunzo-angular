@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CarouselModule } from "ngx-owl-carousel-o";
 
@@ -11,6 +11,7 @@ import {
   selector: "app-lazy-load-example",
   templateUrl: "./lazy-load-example.html",
   styleUrls: ["./lazy-load-example.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CarouselModule],
 })
 export class LazyLoadExample {

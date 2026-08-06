@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { projectSummary } from "../../../../shared/data/dashboard/project/project";
@@ -8,6 +8,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-project-summary",
   templateUrl: "./project-summary.html",
   styleUrls: ["./project-summary.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective, RouterLink],
 })
 export class ProjectSummary {

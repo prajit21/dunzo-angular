@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbDropdown,
@@ -11,6 +11,7 @@ import {
   selector: "app-nesting",
   templateUrl: "./nesting.html",
   styleUrls: ["./nesting.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem],
 })
 export class Nesting {}

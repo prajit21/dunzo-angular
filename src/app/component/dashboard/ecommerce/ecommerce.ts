@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CategoriesSales } from "./categories-sales/categories-sales";
 import { DealOfDay } from "./deal-of-day/deal-of-day";
@@ -16,6 +16,7 @@ import { TopEcommerce } from "./top-ecommerce/top-ecommerce";
   selector: "app-ecommerce",
   templateUrl: "./ecommerce.html",
   styleUrls: ["./ecommerce.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     TopEcommerce,
     SaleTopCountries,

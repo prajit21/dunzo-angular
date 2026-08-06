@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../shared/component/feathericon/feathericon";
 import { browseArticlesData } from "../../../shared/data/knowledgebase/knowledgebase";
@@ -7,6 +7,7 @@ import { browseArticlesData } from "../../../shared/data/knowledgebase/knowledge
   selector: "app-browse-artical-categories",
   templateUrl: "./browse-artical-categories.html",
   styleUrls: ["./browse-artical-categories.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Feathericon],
 })
 export class BrowseArticalCategories {

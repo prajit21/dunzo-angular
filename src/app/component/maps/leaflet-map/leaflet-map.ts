@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { LeafletModule } from "@bluehalo/ngx-leaflet";
 import { GeoJsonObject } from "geojson";
@@ -9,6 +9,7 @@ import * as L from "leaflet";
   selector: "app-leaflet-map",
   templateUrl: "./leaflet-map.html",
   styleUrls: ["./leaflet-map.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [LeafletModule],
 })
 export class LeafletMap {

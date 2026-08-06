@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ActivityLog } from "./activity-log/activity-log";
 import { CommonAddFriends } from "./common-add-friends/common-add-friends";
@@ -10,6 +10,7 @@ import * as data from "../../../../shared/data/social-media/social-media-data";
   selector: "app-about-center",
   templateUrl: "./about-center.html",
   styleUrls: ["./about-center.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonAddFriends, Feathericon, HobbiesEduction, ActivityLog],
 })
 export class AboutCenter {

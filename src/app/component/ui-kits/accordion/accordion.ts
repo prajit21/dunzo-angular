@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CollapseAccordion } from "./collapse-accordion/collapse-accordion";
 import { FlushAccordion } from "./flush-accordion/flush-accordion";
@@ -12,6 +12,7 @@ import { SimpleAccordion } from "./simple-accordion/simple-accordion";
   selector: "app-accordion",
   templateUrl: "./accordion.html",
   styleUrls: ["./accordion.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     SimpleAccordion,
     FlushAccordion,

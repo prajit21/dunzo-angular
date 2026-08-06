@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { BrowseArticalCategories } from "./browse-artical-categories/browse-artical-categories";
 import { KnowledgebaseFooterData } from "./knowledgebase-footer-data/knowledgebase-footer-data";
@@ -8,6 +8,7 @@ import { KnowledgebaseTopData } from "./knowledgebase-top-data/knowledgebase-top
   selector: "app-knowledgebase",
   templateUrl: "./knowledgebase.html",
   styleUrls: ["./knowledgebase.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     KnowledgebaseTopData,
     BrowseArticalCategories,

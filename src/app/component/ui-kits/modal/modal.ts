@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { BasicModal } from "./basic-modal/basic-modal";
 import { CenteredModal } from "./centered-modal/centered-modal";
@@ -12,6 +12,7 @@ import { ToggleBetweenModals } from "./toggle-between-modals/toggle-between-moda
   selector: "app-modal",
   templateUrl: "./modal.html",
   styleUrls: ["./modal.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     BasicModal,
     SizesModal,

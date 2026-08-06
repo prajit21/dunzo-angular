@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { Filter } from "./filter/filter";
@@ -11,6 +11,7 @@ import { ProductBoxFilterService } from "../../../shared/services/main-ecommerce
   selector: "app-product",
   templateUrl: "./product.html",
   styleUrls: ["./product.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     ClickOutsideDirective,
     Feathericon,

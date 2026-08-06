@@ -1,9 +1,10 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
   selector: "app-buttons-with-prefix-postfix",
   templateUrl: "./buttons-with-prefix-postfix.html",
   styleUrls: ["./buttons-with-prefix-postfix.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class ButtonsWithPrefixPostfix {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgApexchartsModule } from "ng-apexcharts";
 
@@ -8,6 +8,7 @@ import * as chartData from "../../../../shared/data/charts/apex-charts";
   selector: "app-candlestick-chart",
   templateUrl: "./candlestick-chart.html",
   styleUrls: ["./candlestick-chart.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgApexchartsModule],
 })
 export class CandlestickChart {

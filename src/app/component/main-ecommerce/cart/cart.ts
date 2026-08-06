@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { Feathericon } from "../../../shared/component/feathericon/feathericon";
@@ -8,6 +8,7 @@ import { cartItem } from "../../../shared/data/main-ecommerce/cart";
   selector: "app-cart",
   templateUrl: "./cart.html",
   styleUrls: ["./cart.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Feathericon, RouterLink],
 })
 export class Cart {

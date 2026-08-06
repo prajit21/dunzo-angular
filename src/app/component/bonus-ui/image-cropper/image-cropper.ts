@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import {
@@ -12,6 +12,7 @@ import {
   selector: "app-image-cropper",
   templateUrl: "./image-cropper.html",
   styleUrls: ["./image-cropper.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ImageCropperComponent, FormsModule],
 })
 export class ImageCrop {

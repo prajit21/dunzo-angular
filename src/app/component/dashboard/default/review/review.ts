@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CarouselModule } from "ngx-owl-carousel-o";
 
@@ -12,6 +12,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-review",
   templateUrl: "./review.html",
   styleUrls: ["./review.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective, CarouselModule],
 })
 export class Review {

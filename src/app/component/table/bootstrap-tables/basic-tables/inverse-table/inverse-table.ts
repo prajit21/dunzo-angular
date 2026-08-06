@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { InverseTables } from "../../../../../shared/data/table/bootstrap-table/basic-tables";
 
@@ -6,6 +6,7 @@ import { InverseTables } from "../../../../../shared/data/table/bootstrap-table/
   selector: "app-inverse-table",
   templateUrl: "./inverse-table.html",
   styleUrls: ["./inverse-table.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class InverseTable {

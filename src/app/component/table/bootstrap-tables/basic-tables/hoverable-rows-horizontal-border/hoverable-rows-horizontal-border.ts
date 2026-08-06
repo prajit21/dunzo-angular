@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../../../shared/component/feathericon/feathericon";
 import { hoverbleData } from "../../../../../shared/data/table/bootstrap-table/basic-tables";
@@ -7,6 +7,7 @@ import { hoverbleData } from "../../../../../shared/data/table/bootstrap-table/b
   selector: "app-hoverable-rows-horizontal-border",
   templateUrl: "./hoverable-rows-horizontal-border.html",
   styleUrls: ["./hoverable-rows-horizontal-border.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Feathericon],
 })
 export class HoverableRowsHorizontalBorder {

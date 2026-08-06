@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgxPrintDirective } from "ngx-print";
 
@@ -10,6 +10,7 @@ import { TotalInvoice2 } from "./total-invoice2/total-invoice2";
   selector: "app-invoice2",
   templateUrl: "./invoice2.html",
   styleUrls: ["./invoice2.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Invoice2Top, Invoice2Table, TotalInvoice2, NgxPrintDirective],
 })
 export class Invoice2 {}

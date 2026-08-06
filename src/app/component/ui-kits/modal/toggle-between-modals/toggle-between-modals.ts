@@ -1,4 +1,9 @@
-import { Component, TemplateRef, inject } from "@angular/core";
+import {
+  Component,
+  TemplateRef,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { NgbModal, NgbModalRef } from "@ng-bootstrap/ng-bootstrap";
 
@@ -6,6 +11,7 @@ import { NgbModal, NgbModalRef } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-toggle-between-modals",
   templateUrl: "./toggle-between-modals.html",
   styleUrls: ["./toggle-between-modals.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class ToggleBetweenModals {

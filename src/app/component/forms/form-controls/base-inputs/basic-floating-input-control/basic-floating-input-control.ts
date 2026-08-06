@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { FormDetails } from "./form-details/form-details";
@@ -7,6 +7,7 @@ import { FormDetails } from "./form-details/form-details";
   selector: "app-basic-floating-input-control",
   templateUrl: "./basic-floating-input-control.html",
   styleUrls: ["./basic-floating-input-control.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, FormDetails],
 })
 export class BasicFloatingInputControl {

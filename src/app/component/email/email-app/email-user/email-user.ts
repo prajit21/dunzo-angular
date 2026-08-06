@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Users } from "../../../../shared/data/email/email-app";
 
@@ -6,6 +6,7 @@ import { Users } from "../../../../shared/data/email/email-app";
   selector: "app-email-user",
   templateUrl: "./email-user.html",
   styleUrls: ["./email-user.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class EmailUser {

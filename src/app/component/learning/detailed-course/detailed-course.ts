@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { commentsData } from "../../../shared/data/learning/learning";
 import { BlogComment } from "../../blog/blog-single/blog-comment/blog-comment";
@@ -8,6 +8,7 @@ import { LearningFilter } from "../learning-filter/learning-filter";
   selector: "app-detailed-course",
   templateUrl: "./detailed-course.html",
   styleUrls: ["./detailed-course.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [BlogComment, LearningFilter],
 })
 export class DetailedCourse {

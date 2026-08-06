@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Budget } from "./budget/budget";
 import { LaunchApp } from "./launch-app/launch-app";
@@ -15,6 +15,7 @@ import { UpcomingProjectsCards } from "./upcoming-projects-cards/upcoming-projec
   selector: "app-project",
   templateUrl: "./project.html",
   styleUrls: ["./project.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     TopCommonProject,
     ProjectSummary,

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Shape } from "../../../../shared/data/ui-kits/avatar/avavtar";
 
@@ -6,6 +6,7 @@ import { Shape } from "../../../../shared/data/ui-kits/avatar/avavtar";
   selector: "app-shapes",
   templateUrl: "./shapes.html",
   styleUrls: ["./shapes.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class Shapes {

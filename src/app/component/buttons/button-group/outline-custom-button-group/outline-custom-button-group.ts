@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { outlineData } from "../../../../shared/data/buttons/button-group";
 
@@ -6,6 +6,7 @@ import { outlineData } from "../../../../shared/data/buttons/button-group";
   selector: "app-outline-custom-button-group",
   templateUrl: "./outline-custom-button-group.html",
   styleUrls: ["./outline-custom-button-group.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class OutlineCustomButtonGroup {

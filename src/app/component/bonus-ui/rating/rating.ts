@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CurrentRatingbar } from "./current-ratingbar/current-ratingbar";
 import { HorizontalRatingbar } from "./horizontal-ratingbar/horizontal-ratingbar";
@@ -11,6 +11,7 @@ import { StarRatingbar } from "./star-ratingbar/star-ratingbar";
   selector: "app-rating",
   templateUrl: "./rating.html",
   styleUrls: ["./rating.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     OneToTenRatingbar,
     MovieRatingbar,

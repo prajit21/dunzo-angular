@@ -1,4 +1,4 @@
-import { Component, output } from "@angular/core";
+import { Component, output, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -11,6 +11,7 @@ import {
   selector: "app-selling-price",
   templateUrl: "./selling-price.html",
   styleUrls: ["./selling-price.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule],
 })
 export class SellingPrice {

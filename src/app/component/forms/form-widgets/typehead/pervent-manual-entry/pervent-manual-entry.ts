@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbTypeahead } from "@ng-bootstrap/ng-bootstrap";
@@ -81,6 +81,7 @@ const states: State[] = [
   selector: "app-pervent-manual-entry",
   templateUrl: "./pervent-manual-entry.html",
   styleUrls: ["./pervent-manual-entry.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, NgbTypeahead],
 })
 export class PerventManualEntry {

@@ -1,5 +1,10 @@
 import { AsyncPipe, DecimalPipe, NgClass } from "@angular/common";
-import { Component, inject, viewChildren } from "@angular/core";
+import {
+  Component,
+  inject,
+  viewChildren,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbPagination } from "@ng-bootstrap/ng-bootstrap";
@@ -26,6 +31,7 @@ import { SupportTicketService } from "../../../shared/services/support-ticket.se
     DecimalPipe,
     NgClass,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [SupportTicketService, DecimalPipe],
 })
 export class SupportTicketDataTable {

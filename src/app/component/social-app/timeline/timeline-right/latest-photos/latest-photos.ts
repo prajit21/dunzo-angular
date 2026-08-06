@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbAccordionDirective,
@@ -17,6 +17,7 @@ import * as data from "../../../../../shared/data/social-media/social-media-data
   selector: "app-latest-photos",
   templateUrl: "./latest-photos.html",
   styleUrls: ["./latest-photos.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbAccordionDirective,
     NgbAccordionItem,

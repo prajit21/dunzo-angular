@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../../shared/component/feathericon/feathericon";
 import * as data from "../../../../shared/data/ui-kits/alert/alert";
@@ -7,6 +7,7 @@ import * as data from "../../../../shared/data/ui-kits/alert/alert";
   selector: "app-outline-dark-light-alerts",
   templateUrl: "./outline-dark-light-alerts.html",
   styleUrls: ["./outline-dark-light-alerts.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Feathericon],
 })
 export class OutlineDarkLightAlerts {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbTooltip } from "@ng-bootstrap/ng-bootstrap";
 
@@ -6,6 +6,7 @@ import { NgbTooltip } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-hover-effect",
   templateUrl: "./hover-effect.html",
   styleUrls: ["./hover-effect.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgbTooltip],
 })
 export class HoverEffect {}

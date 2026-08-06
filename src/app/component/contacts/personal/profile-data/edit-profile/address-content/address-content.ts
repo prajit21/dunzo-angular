@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import * as data from "../../../../../../shared/data/contacts/all-contact";
 
@@ -6,6 +6,7 @@ import * as data from "../../../../../../shared/data/contacts/all-contact";
   selector: "app-address-content",
   templateUrl: "./address-content.html",
   styleUrls: ["./address-content.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class AddressContent {

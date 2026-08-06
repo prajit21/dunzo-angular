@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Bordercolors } from "../../../../shared/data/ui-kits/helper-classes/helper-classes";
 
@@ -6,6 +6,7 @@ import { Bordercolors } from "../../../../shared/data/ui-kits/helper-classes/hel
   selector: "app-border-color",
   templateUrl: "./border-color.html",
   styleUrls: ["./border-color.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class BorderColor {

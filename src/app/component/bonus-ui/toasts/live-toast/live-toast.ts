@@ -1,10 +1,11 @@
 import { NgClass } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
   selector: "app-live-toast",
   templateUrl: "./live-toast.html",
   styleUrls: ["./live-toast.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgClass],
 })
 export class LiveToast {

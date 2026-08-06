@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { RecentOrderTwo } from "../../../../shared/data/dashboard/E-commerce/ecommerce";
 import { ClickOutsideDirective } from "../../../../shared/directives/outside.directive";
@@ -7,6 +7,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-ecommerce-recent-order",
   templateUrl: "./ecommerce-recent-order.html",
   styleUrls: ["./ecommerce-recent-order.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective],
 })
 export class EcommerceRecentOrder {

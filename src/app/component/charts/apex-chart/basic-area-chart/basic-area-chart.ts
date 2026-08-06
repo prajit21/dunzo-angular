@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgApexchartsModule } from "ng-apexcharts";
 
@@ -8,6 +8,7 @@ import * as chartData from "../../../../shared/data/charts/apex-charts";
   selector: "app-basic-area-chart",
   templateUrl: "./basic-area-chart.html",
   styleUrls: ["./basic-area-chart.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgApexchartsModule],
 })
 export class BasicAreaChart {

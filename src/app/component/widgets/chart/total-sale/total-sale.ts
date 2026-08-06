@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgApexchartsModule } from "ng-apexcharts";
 
@@ -8,6 +8,7 @@ import * as widgetchat from "../../../../shared/data/widget/chart/chart";
   selector: "app-total-sale",
   templateUrl: "./total-sale.html",
   styleUrls: ["./total-sale.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgApexchartsModule],
 })
 export class TotalSale {

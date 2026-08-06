@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { AddProductsDetails } from "./add-products-details/add-products-details";
 import { Advance } from "./advance/advance";
@@ -13,6 +13,7 @@ import { AddProducts } from "../../../shared/data/main-ecommerce/add-product";
   selector: "app-add-product",
   templateUrl: "./add-product.html",
   styleUrls: ["./add-product.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     ProductFormStepe,
     NgClass,

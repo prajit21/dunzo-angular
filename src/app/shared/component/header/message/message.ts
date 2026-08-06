@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { Feathericon } from "../../feathericon/feathericon";
@@ -7,6 +7,7 @@ import { Feathericon } from "../../feathericon/feathericon";
   selector: "app-message",
   templateUrl: "./message.html",
   styleUrls: ["./message.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink, Feathericon],
 })
 export class Message {

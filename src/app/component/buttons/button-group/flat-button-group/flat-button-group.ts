@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { commongroupButton } from "../../../../shared/data/buttons/button-group";
 
@@ -6,6 +6,7 @@ import { commongroupButton } from "../../../../shared/data/buttons/button-group"
   selector: "app-flat-button-group",
   templateUrl: "./flat-button-group.html",
   styleUrls: ["./flat-button-group.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class FlatButtonGroup {

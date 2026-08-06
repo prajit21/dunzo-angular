@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { LeafletModule } from "@bluehalo/ngx-leaflet";
 import * as L from "leaflet";
@@ -10,6 +10,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-sale-top-countries",
   templateUrl: "./sale-top-countries.html",
   styleUrls: ["./sale-top-countries.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [LeafletModule, ClickOutsideDirective],
 })
 export class SaleTopCountries {

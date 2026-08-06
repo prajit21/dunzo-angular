@@ -1,5 +1,10 @@
 import { DecimalPipe, AsyncPipe } from "@angular/common";
-import { Component, inject, viewChildren } from "@angular/core";
+import {
+  Component,
+  inject,
+  viewChildren,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbHighlight, NgbPagination } from "@ng-bootstrap/ng-bootstrap";
@@ -17,6 +22,7 @@ import { TableService } from "../../../shared/services/table.service";
   templateUrl: "./data-table.html",
   styleUrls: ["./data-table.scss"],
   providers: [TableService, DecimalPipe],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     FormsModule,
     NgbdSortableHeaderDirective,

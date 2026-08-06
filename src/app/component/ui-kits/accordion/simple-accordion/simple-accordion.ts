@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbAccordionDirective,
@@ -18,6 +18,7 @@ import { simpleAccordion } from "../../../../shared/data/ui-kits/accordion/accor
   selector: "app-simple-accordion",
   templateUrl: "./simple-accordion.html",
   styleUrls: ["./simple-accordion.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbAccordionDirective,
     NgbAccordionItem,

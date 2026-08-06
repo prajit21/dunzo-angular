@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   DefaultButtons,
@@ -9,6 +9,7 @@ import {
   selector: "app-default-style",
   templateUrl: "./default-style.html",
   styleUrls: ["./default-style.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class DefaultStyle {

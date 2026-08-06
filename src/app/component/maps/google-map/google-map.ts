@@ -1,4 +1,4 @@
-import { Component, viewChild } from "@angular/core";
+import { Component, viewChild, ChangeDetectionStrategy } from "@angular/core";
 import { GoogleMap, GoogleMapsModule, MapMarker } from "@angular/google-maps";
 
 interface Marker {
@@ -12,6 +12,7 @@ interface Marker {
   selector: "app-google-map",
   templateUrl: "./google-map.html",
   styleUrls: ["./google-map.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [GoogleMapsModule],
 })
 export class GoogleMaps {

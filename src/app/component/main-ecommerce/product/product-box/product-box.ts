@@ -5,6 +5,7 @@ import {
   Output,
   inject,
   viewChild,
+  ChangeDetectionStrategy,
 } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
@@ -23,6 +24,7 @@ import { QuickView } from "../quick-view/quick-view";
   selector: "app-product-box",
   templateUrl: "./product-box.html",
   styleUrls: ["./product-box.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink, NgbRating, QuickView],
 })
 export class ProductBox implements OnInit {

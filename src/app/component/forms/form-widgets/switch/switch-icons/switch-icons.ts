@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { iconsiwtchSizing } from "../../../../../shared/data/forms/forms-widgets/switch";
 
@@ -6,6 +6,7 @@ import { iconsiwtchSizing } from "../../../../../shared/data/forms/forms-widgets
   selector: "app-switch-icons",
   templateUrl: "./switch-icons.html",
   styleUrls: ["./switch-icons.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class SwitchIcons {

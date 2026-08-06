@@ -1,9 +1,15 @@
 import { ViewportScroller } from "@angular/common";
-import { Component, HostListener, inject } from "@angular/core";
+import {
+  Component,
+  HostListener,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 @Component({
   selector: "app-tap-to-top",
   templateUrl: "./tap-to-top.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ["./tap-to-top.scss"],
 })
 export class TapToTop {

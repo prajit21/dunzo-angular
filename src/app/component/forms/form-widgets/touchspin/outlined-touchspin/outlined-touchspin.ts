@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { outlinedtouchspin } from "../../../../../shared/data/forms/forms-widgets/touchspin";
 
@@ -6,6 +6,7 @@ import { outlinedtouchspin } from "../../../../../shared/data/forms/forms-widget
   selector: "app-outlined-touchspin",
   templateUrl: "./outlined-touchspin.html",
   styleUrls: ["./outlined-touchspin.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class OutlinedTouchspin {

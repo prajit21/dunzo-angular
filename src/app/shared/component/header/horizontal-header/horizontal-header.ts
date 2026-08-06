@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { TranslateModule } from "@ngx-translate/core";
@@ -14,6 +14,7 @@ import { AppList } from "../app-list/app-list";
   selector: "app-horizontal-header",
   templateUrl: "./horizontal-header.html",
   styleUrls: ["./horizontal-header.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [AppList, SvgIcon, RouterLink, TranslateModule],
 })
 export class HorizontalHeader {

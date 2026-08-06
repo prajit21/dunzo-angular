@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import {
@@ -11,6 +11,7 @@ import {
   selector: "app-custom-checkbox",
   templateUrl: "./custom-checkbox.html",
   styleUrls: ["./custom-checkbox.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule],
 })
 export class CustomCheckbox {

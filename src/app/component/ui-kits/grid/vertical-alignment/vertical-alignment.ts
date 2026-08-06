@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { VerticalAlignments } from "../../../../shared/data/ui-kits/grid/grid-options";
 
@@ -6,6 +6,7 @@ import { VerticalAlignments } from "../../../../shared/data/ui-kits/grid/grid-op
   selector: "app-vertical-alignment",
   templateUrl: "./vertical-alignment.html",
   styleUrls: ["./vertical-alignment.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class VerticalAlignment {

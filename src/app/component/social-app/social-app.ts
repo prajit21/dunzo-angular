@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { SocialProfile } from "./social-profile/social-profile";
 
@@ -6,6 +6,7 @@ import { SocialProfile } from "./social-profile/social-profile";
   selector: "app-social-app",
   templateUrl: "./social-app.html",
   styleUrls: ["./social-app.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SocialProfile],
 })
 export class SocialApp {}

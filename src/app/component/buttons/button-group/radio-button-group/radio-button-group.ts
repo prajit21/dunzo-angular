@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { radioButton } from "../../../../shared/data/buttons/button-group";
 
@@ -6,6 +6,7 @@ import { radioButton } from "../../../../shared/data/buttons/button-group";
   selector: "app-radio-button-group",
   templateUrl: "./radio-button-group.html",
   styleUrls: ["./radio-button-group.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class RadioButtonGroup {

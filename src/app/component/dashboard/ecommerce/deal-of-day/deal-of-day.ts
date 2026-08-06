@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CarouselModule } from "ngx-owl-carousel-o";
 
@@ -11,6 +11,7 @@ import {
   selector: "app-deal-of-day",
   templateUrl: "./deal-of-day.html",
   styleUrls: ["./deal-of-day.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CarouselModule],
 })
 export class DealOfDay {

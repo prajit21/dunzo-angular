@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgApexchartsModule } from "ng-apexcharts";
 
@@ -9,6 +9,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-ecommerce-sale-statistic",
   templateUrl: "./ecommerce-sale-statistic.html",
   styleUrls: ["./ecommerce-sale-statistic.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective, NgApexchartsModule],
 })
 export class EcommerceSaleStatistic {

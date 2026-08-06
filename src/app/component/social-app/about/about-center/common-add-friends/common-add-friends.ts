@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import { addFriends } from "../../../../../shared/data/social-media/social-media-data";
 
@@ -6,6 +6,7 @@ import { addFriends } from "../../../../../shared/data/social-media/social-media
   selector: "app-common-add-friends",
   templateUrl: "./common-add-friends.html",
   styleUrls: ["./common-add-friends.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class CommonAddFriends {

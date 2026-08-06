@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { FullscreenBelowLgModal } from "./fullscreen-below-lg-modal/fullscreen-below-lg-modal";
 import { FullscreenBelowMdModal } from "./fullscreen-below-md-modal/fullscreen-below-md-modal";
@@ -11,6 +11,7 @@ import { FullscreenUiModal } from "./fullscreen-ui-modal/fullscreen-ui-modal";
   selector: "app-fullscreen-modal",
   templateUrl: "./fullscreen-modal.html",
   styleUrls: ["./fullscreen-modal.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     FullscreenUiModal,
     FullscreenBelowSmModal,

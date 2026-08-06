@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbDropdown,
@@ -11,6 +11,7 @@ import {
   selector: "app-ui-table",
   templateUrl: "./ui-table.html",
   styleUrls: ["./ui-table.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem],
 })
 export class UiTable {}

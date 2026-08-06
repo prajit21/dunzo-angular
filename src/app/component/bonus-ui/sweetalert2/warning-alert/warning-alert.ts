@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import Swal from "sweetalert2";
 
@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
   selector: "app-warning-alert",
   templateUrl: "./warning-alert.html",
   styleUrls: ["./warning-alert.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class WarningAlert {

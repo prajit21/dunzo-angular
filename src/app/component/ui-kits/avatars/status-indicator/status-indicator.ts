@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { StatusIndicators } from "../../../../shared/data/ui-kits/avatar/avavtar";
 
@@ -6,6 +6,7 @@ import { StatusIndicators } from "../../../../shared/data/ui-kits/avatar/avavtar
   selector: "app-status-indicator",
   templateUrl: "./status-indicator.html",
   styleUrls: ["./status-indicator.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class StatusIndicator {

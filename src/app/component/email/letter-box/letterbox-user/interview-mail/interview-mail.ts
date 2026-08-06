@@ -1,4 +1,4 @@
-import { Component, output } from "@angular/core";
+import { Component, output, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbTooltip } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +8,7 @@ import { UserDetails } from "./user-details/user-details";
   selector: "app-interview-mail",
   templateUrl: "./interview-mail.html",
   styleUrls: ["./interview-mail.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgbTooltip, UserDetails],
 })
 export class InterviewMail {

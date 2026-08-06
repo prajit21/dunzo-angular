@@ -1,4 +1,10 @@
-import { Component, TemplateRef, inject, viewChild } from "@angular/core";
+import {
+  Component,
+  TemplateRef,
+  inject,
+  viewChild,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { ModalDismissReasons, NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { NgxPrintDirective } from "ngx-print";
@@ -9,6 +15,7 @@ import * as data from "../../../../shared/data/contacts/all-contact";
   selector: "app-print",
   templateUrl: "./print.html",
   styleUrls: ["./print.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgxPrintDirective],
 })
 export class Print {

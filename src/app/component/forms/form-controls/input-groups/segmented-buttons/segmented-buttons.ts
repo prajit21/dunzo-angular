@@ -1,9 +1,10 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
   selector: "app-segmented-buttons",
   templateUrl: "./segmented-buttons.html",
   styleUrls: ["./segmented-buttons.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class SegmentedButtons {

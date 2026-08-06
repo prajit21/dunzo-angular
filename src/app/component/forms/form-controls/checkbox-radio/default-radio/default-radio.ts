@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { defaultRedio } from "../../../../../shared/data/forms/form-controls/checkbox-radio";
 
@@ -6,6 +6,7 @@ import { defaultRedio } from "../../../../../shared/data/forms/form-controls/che
   selector: "app-default-radio",
   templateUrl: "./default-radio.html",
   styleUrls: ["./default-radio.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class DefaultRadio {

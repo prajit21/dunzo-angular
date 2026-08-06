@@ -1,5 +1,5 @@
 import { SlicePipe } from "@angular/common";
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbRatingConfig, NgbRating } from "@ng-bootstrap/ng-bootstrap";
 
@@ -10,6 +10,7 @@ import { JobFilter } from "../job-filter/job-filter";
   selector: "app-list-view",
   templateUrl: "./list-view.html",
   styleUrls: ["./list-view.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [JobFilter, NgbRating, SlicePipe],
 })
 export class ListView {

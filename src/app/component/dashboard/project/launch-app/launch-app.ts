@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { ClickOutsideDirective } from "../../../../shared/directives/outside.directive";
@@ -7,6 +7,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-launch-app",
   templateUrl: "./launch-app.html",
   styleUrls: ["./launch-app.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective, RouterLink],
 })
 export class LaunchApp {

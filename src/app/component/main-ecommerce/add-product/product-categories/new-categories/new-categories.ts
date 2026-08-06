@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { AngularEditorModule } from "@kolkov/angular-editor";
@@ -8,6 +8,7 @@ import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-new-categories",
   templateUrl: "./new-categories.html",
   styleUrls: ["./new-categories.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [AngularEditorModule, FormsModule],
 })
 export class NewCategories {

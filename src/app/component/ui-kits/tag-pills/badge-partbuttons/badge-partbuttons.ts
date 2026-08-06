@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../../shared/component/feathericon/feathericon";
 import { BadgePartButtons } from "../../../../shared/data/ui-kits/tag-pills/tag-pills";
@@ -7,6 +7,7 @@ import { BadgePartButtons } from "../../../../shared/data/ui-kits/tag-pills/tag-
   selector: "app-badge-partbuttons",
   templateUrl: "./badge-partbuttons.html",
   styleUrls: ["./badge-partbuttons.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Feathericon],
 })
 export class BadgePartbuttons {

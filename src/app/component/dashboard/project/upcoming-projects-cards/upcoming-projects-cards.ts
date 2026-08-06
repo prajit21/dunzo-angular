@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { upcomingProjectCard } from "../../../../shared/data/dashboard/project/project";
@@ -8,6 +8,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-upcoming-projects-cards",
   templateUrl: "./upcoming-projects-cards.html",
   styleUrls: ["./upcoming-projects-cards.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink, ClickOutsideDirective],
 })
 export class UpcomingProjectsCards {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   learningTopData,
@@ -10,6 +10,7 @@ import { LearningFilter } from "../learning-filter/learning-filter";
   selector: "app-learning-list",
   templateUrl: "./learning-list.html",
   styleUrls: ["./learning-list.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [LearningFilter],
 })
 export class LearningList {

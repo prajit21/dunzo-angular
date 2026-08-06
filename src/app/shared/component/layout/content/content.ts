@@ -1,5 +1,10 @@
 import { NgClass } from "@angular/common";
-import { Component, HostListener, inject } from "@angular/core";
+import {
+  Component,
+  HostListener,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { Router, RouterOutlet } from "@angular/router";
 
 import { HideNavScrollService } from "../../../services/hide-nav-scroll.service";
@@ -15,6 +20,7 @@ import { Sidebar } from "../../sidebar/sidebar";
   selector: "app-content",
   templateUrl: "./content.html",
   styleUrls: ["./content.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     Header,
     Sidebar,

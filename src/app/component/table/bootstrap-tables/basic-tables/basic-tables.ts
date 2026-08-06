@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { BorderBottomColor } from "./border-bottom-color/border-bottom-color";
 import { BreckpointSpecific } from "./breckpoint-specific/breckpoint-specific";
@@ -17,6 +17,7 @@ import { TableHeadOptions } from "./table-head-options/table-head-options";
   selector: "app-basic-tables",
   templateUrl: "./basic-tables.html",
   styleUrls: ["./basic-tables.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     BorderBottomColor,
     InverseTable,

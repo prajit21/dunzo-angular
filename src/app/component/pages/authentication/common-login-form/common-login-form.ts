@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterLink } from "@angular/router";
 
@@ -8,6 +8,7 @@ import { Feathericon } from "../../../../shared/component/feathericon/featherico
   selector: "app-common-login-form",
   templateUrl: "./common-login-form.html",
   styleUrls: ["./common-login-form.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, RouterLink, Feathericon],
 })
 export class CommonLoginForm {

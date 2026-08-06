@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormBuilder,
   FormGroup,
@@ -14,6 +14,7 @@ import { Feathericon } from "../../shared/component/feathericon/feathericon";
   selector: "app-login",
   templateUrl: "./login.html",
   styleUrls: ["./login.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [RouterLink, FormsModule, ReactiveFormsModule, Feathericon],
 })
 export class Login {

@@ -1,4 +1,9 @@
-import { Component, SimpleChanges, inject } from "@angular/core";
+import {
+  Component,
+  SimpleChanges,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -12,6 +17,7 @@ import { Personal } from "../personal/personal";
   selector: "app-contact-sidemenu",
   templateUrl: "./contact-sidemenu.html",
   styleUrls: ["./contact-sidemenu.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Feathericon, Personal],
 })
 export class ContactSidemenu {

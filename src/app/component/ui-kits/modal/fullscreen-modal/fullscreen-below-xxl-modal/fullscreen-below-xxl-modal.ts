@@ -1,4 +1,9 @@
-import { Component, TemplateRef, inject } from "@angular/core";
+import {
+  Component,
+  TemplateRef,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,6 +13,7 @@ import { Feathericon } from "../../../../../shared/component/feathericon/feather
   selector: "app-fullscreen-below-xxl-modal",
   templateUrl: "./fullscreen-below-xxl-modal.html",
   styleUrls: ["./fullscreen-below-xxl-modal.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Feathericon],
 })
 export class FullscreenBelowXxlModal {

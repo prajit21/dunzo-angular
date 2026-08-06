@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 import * as feather from "feather-icons";
 
@@ -6,6 +6,7 @@ import * as feather from "feather-icons";
   selector: "app-feathericon",
   templateUrl: "./feathericon.html",
   styleUrls: ["./feathericon.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class Feathericon {

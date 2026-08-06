@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../../shared/component/feathericon/feathericon";
 
@@ -6,6 +6,7 @@ import { Feathericon } from "../../../../shared/component/feathericon/featherico
   selector: "app-brand",
   templateUrl: "./brand.html",
   styleUrls: ["./brand.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Feathericon],
 })
 export class Brand {}

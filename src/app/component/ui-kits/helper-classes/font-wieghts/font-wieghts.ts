@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { FontWight } from "../../../../shared/data/ui-kits/helper-classes/helper-classes";
 
@@ -6,6 +6,7 @@ import { FontWight } from "../../../../shared/data/ui-kits/helper-classes/helper
   selector: "app-font-wieghts",
   templateUrl: "./font-wieghts.html",
   styleUrls: ["./font-wieghts.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class FontWieghts {

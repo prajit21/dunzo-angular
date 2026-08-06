@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { DefaultStyle } from "./default-style/default-style";
 import { HorizontalStyle } from "./horizontal-style/horizontal-style";
@@ -14,6 +14,7 @@ import { WithoutBordersStyle } from "./without-borders-style/without-borders-sty
   selector: "app-mega-options",
   templateUrl: "./mega-options.html",
   styleUrls: ["./mega-options.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     VariationRadio,
     VariationCheckbox,

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CommonBackground } from "./common-background/common-background";
 import * as borderData from "../../../../shared/data/ui-kits/helper-classes/helper-classes";
@@ -7,6 +7,7 @@ import * as borderData from "../../../../shared/data/ui-kits/helper-classes/help
   selector: "app-background-colors",
   templateUrl: "./background-colors.html",
   styleUrls: ["./background-colors.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [CommonBackground],
 })
 export class BackgroundColors {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ContextualClass } from "../../../../shared/data/ui-kits/lists/lists";
 
@@ -6,6 +6,7 @@ import { ContextualClass } from "../../../../shared/data/ui-kits/lists/lists";
   selector: "app-contextual-classes",
   templateUrl: "./contextual-classes.html",
   styleUrls: ["./contextual-classes.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class ContextualClasses {

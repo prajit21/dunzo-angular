@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../../shared/component/feathericon/feathericon";
 import { TranslucentToast } from "../../../../shared/data/bonus-ui/toasts";
@@ -7,6 +7,7 @@ import { TranslucentToast } from "../../../../shared/data/bonus-ui/toasts";
   selector: "app-translucent-toasts",
   templateUrl: "./translucent-toasts.html",
   styleUrls: ["./translucent-toasts.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Feathericon],
 })
 export class TranslucentToasts {

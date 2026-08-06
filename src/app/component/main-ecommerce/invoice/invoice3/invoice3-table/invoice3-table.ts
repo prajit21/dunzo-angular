@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { invoice3 } from "../../../../../shared/data/main-ecommerce/invoice";
 
@@ -6,6 +6,7 @@ import { invoice3 } from "../../../../../shared/data/main-ecommerce/invoice";
   selector: "app-invoice3-table",
   templateUrl: "./invoice3-table.html",
   styleUrls: ["./invoice3-table.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class Invoice3Table {

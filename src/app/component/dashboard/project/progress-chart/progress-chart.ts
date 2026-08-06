@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgApexchartsModule } from "ng-apexcharts";
 
@@ -8,6 +8,7 @@ import { progresChart } from "../../../../shared/data/dashboard/project/project-
   selector: "app-progress-chart",
   templateUrl: "./progress-chart.html",
   styleUrls: ["./progress-chart.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgApexchartsModule],
 })
 export class ProgressChart {

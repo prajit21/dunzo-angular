@@ -1,5 +1,10 @@
 import { AsyncPipe, DecimalPipe } from "@angular/common";
-import { Component, inject, viewChildren } from "@angular/core";
+import {
+  Component,
+  inject,
+  viewChildren,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterLink } from "@angular/router";
 
@@ -27,6 +32,7 @@ import { OrderService } from "../../../../shared/services/main-ecommerce/order.s
     NgbPagination,
     AsyncPipe,
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [DecimalPipe, OrderService],
 })
 export class DatatableOrderhistory {

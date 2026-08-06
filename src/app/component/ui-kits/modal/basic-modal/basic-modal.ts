@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { OpenModalDunzo } from "./open-modal-dunzo/open-modal-dunzo";
 import { ScorllingContent } from "./scorlling-content/scorlling-content";
@@ -9,6 +9,7 @@ import { TooltipsPopovers } from "./tooltips-popovers/tooltips-popovers";
   selector: "app-basic-modal",
   templateUrl: "./basic-modal.html",
   styleUrls: ["./basic-modal.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Simple, ScorllingContent, TooltipsPopovers, OpenModalDunzo],
 })
 export class BasicModal {}

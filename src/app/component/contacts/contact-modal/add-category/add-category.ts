@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
@@ -7,6 +7,7 @@ import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-add-category",
   templateUrl: "./add-category.html",
   styleUrls: ["./add-category.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule],
 })
 export class AddCategory {

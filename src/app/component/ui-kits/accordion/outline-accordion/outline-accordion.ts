@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbAccordionDirective,
@@ -18,6 +18,7 @@ import { OutlineAccordions } from "../../../../shared/data/ui-kits/accordion/acc
   selector: "app-outline-accordion",
   templateUrl: "./outline-accordion.html",
   styleUrls: ["./outline-accordion.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbAccordionDirective,
     NgbAccordionItem,

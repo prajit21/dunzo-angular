@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbPopover } from "@ng-bootstrap/ng-bootstrap";
 
@@ -6,6 +6,7 @@ import { NgbPopover } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-popover-direction",
   templateUrl: "./popover-direction.html",
   styleUrls: ["./popover-direction.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgbPopover],
 })
 export class PopoverDirection {}

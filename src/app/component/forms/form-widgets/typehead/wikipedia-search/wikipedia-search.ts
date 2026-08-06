@@ -1,5 +1,10 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
-import { Component, Injectable, inject } from "@angular/core";
+import {
+  Component,
+  Injectable,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbTypeahead } from "@ng-bootstrap/ng-bootstrap";
@@ -33,9 +38,9 @@ export class WikipediaService {
     }
 
     return this.http
-      .get<
-        [string, string[], string[], string[]]
-      >(WIKI_URL, { params: PARAMS.set("search", term) })
+      .get<[string, string[], string[], string[]]>(WIKI_URL, {
+        params: PARAMS.set("search", term),
+      })
       .pipe(map((response) => response[1]));
   }
 }
@@ -45,6 +50,7 @@ export class WikipediaService {
   templateUrl: "./wikipedia-search.html",
   styleUrls: ["./wikipedia-search.scss"],
   providers: [WikipediaService],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, NgbTypeahead],
 })
 export class WikipediaSearch {

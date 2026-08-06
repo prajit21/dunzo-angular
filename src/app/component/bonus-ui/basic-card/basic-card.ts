@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CommonInfoCard } from "./common-info-card/common-info-card";
 import { DarkCard } from "./dark-card/dark-card";
@@ -11,6 +11,7 @@ import { WithoutShadowCard } from "./without-shadow-card/without-shadow-card";
   selector: "app-basic-card",
   templateUrl: "./basic-card.html",
   styleUrls: ["./basic-card.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     SimpleCard,
     FlatCard,

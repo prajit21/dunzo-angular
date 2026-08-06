@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ClickOutsideDirective } from "../../../../shared/directives/outside.directive";
 
@@ -6,6 +6,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-ecommerce-invoices",
   templateUrl: "./ecommerce-invoices.html",
   styleUrls: ["./ecommerce-invoices.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective],
 })
 export class EcommerceInvoices {

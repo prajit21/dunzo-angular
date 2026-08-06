@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbNav,
@@ -16,6 +16,7 @@ import { Chats, Contacts } from "../../../../shared/data/chat/chat";
   selector: "app-contacts-chat-tab",
   templateUrl: "./contacts-chat-tab.html",
   styleUrls: ["./contacts-chat-tab.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbNav,
     NgbNavItem,

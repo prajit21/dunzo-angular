@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { AnimatedButtons } from "./animated-buttons/animated-buttons";
 import { BasicRadioCheckbox } from "./basic-radio-checkbox/basic-radio-checkbox";
@@ -17,6 +17,7 @@ import { RadioToggleButtons } from "./radio-toggle-buttons/radio-toggle-buttons"
   selector: "app-checkbox-radio",
   templateUrl: "./checkbox-radio.html",
   styleUrls: ["./checkbox-radio.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     DefaultCheckbox,
     CustomCheckbox,

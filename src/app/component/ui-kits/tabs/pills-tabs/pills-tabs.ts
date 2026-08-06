@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbNav,
@@ -14,6 +14,7 @@ import {
   selector: "app-pills-tabs",
   templateUrl: "./pills-tabs.html",
   styleUrls: ["./pills-tabs.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbNav,
     NgbNavItem,

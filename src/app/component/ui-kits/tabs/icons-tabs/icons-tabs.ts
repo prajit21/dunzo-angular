@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbNav,
@@ -14,6 +14,7 @@ import {
   selector: "app-icons-tabs",
   templateUrl: "./icons-tabs.html",
   styleUrls: ["./icons-tabs.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbNav,
     NgbNavItem,

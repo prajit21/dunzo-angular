@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbNav,
@@ -20,6 +20,7 @@ import {
   selector: "app-justify-tabs",
   templateUrl: "./justify-tabs.html",
   styleUrls: ["./justify-tabs.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbNav,
     NgbNavItem,

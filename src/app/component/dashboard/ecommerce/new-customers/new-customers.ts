@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 import { NewCustomer } from "../../../../shared/data/dashboard/E-commerce/ecommerce";
@@ -8,6 +8,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-new-customers",
   templateUrl: "./new-customers.html",
   styleUrls: ["./new-customers.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective, RouterLink],
 })
 export class NewCustomers {

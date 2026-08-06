@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Ratios } from "../../../../shared/data/ui-kits/avatar/avavtar";
 
@@ -6,6 +6,7 @@ import { Ratios } from "../../../../shared/data/ui-kits/avatar/avavtar";
   selector: "app-ratio",
   templateUrl: "./ratio.html",
   styleUrls: ["./ratio.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class Ratio {

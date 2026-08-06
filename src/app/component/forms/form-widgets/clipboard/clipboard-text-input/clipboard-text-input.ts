@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { ClipboardService } from "ngx-clipboard";
@@ -7,6 +7,7 @@ import { ClipboardService } from "ngx-clipboard";
   selector: "app-clipboard-text-input",
   templateUrl: "./clipboard-text-input.html",
   styleUrls: ["./clipboard-text-input.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule],
 })
 export class ClipboardTextInput {

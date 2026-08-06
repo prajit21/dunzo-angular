@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ChartistModule } from "ng-chartist";
 
@@ -8,6 +8,7 @@ import * as chartData from "../../../../shared/data/charts/chartist";
   selector: "app-donut-svg-animate",
   templateUrl: "./donut-svg-animate.html",
   styleUrls: ["./donut-svg-animate.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ChartistModule],
 })
 export class DonutSvgAnimate {

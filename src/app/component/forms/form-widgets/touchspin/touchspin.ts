@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ButtonsWithPrefixPostfix } from "./buttons-with-prefix-postfix/buttons-with-prefix-postfix";
 import { DefaultTouchspin } from "./default-touchspin/default-touchspin";
@@ -10,6 +10,7 @@ import { RoundedTouchspin } from "./rounded-touchspin/rounded-touchspin";
   selector: "app-touchspin",
   templateUrl: "./touchspin.html",
   styleUrls: ["./touchspin.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     DefaultTouchspin,
     OutlinedTouchspin,

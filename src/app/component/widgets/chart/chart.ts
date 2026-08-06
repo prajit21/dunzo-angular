@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { CryptoAnnotations } from "./crypto-annotations/crypto-annotations";
 import { CryptocurrencyPrices } from "./cryptocurrency-prices/cryptocurrency-prices";
@@ -20,6 +20,7 @@ import { ProjectCreated } from "../../dashboard/project/project-created/project-
   selector: "app-chart",
   templateUrl: "./chart.html",
   styleUrls: ["./chart.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     TotalSale,
     TotalProject,

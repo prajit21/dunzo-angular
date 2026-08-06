@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ticketListStatus } from "../../../shared/data/support-ticket/support-ticket";
 
@@ -6,6 +6,7 @@ import { ticketListStatus } from "../../../shared/data/support-ticket/support-ti
   selector: "app-support-ticket-list",
   templateUrl: "./support-ticket-list.html",
   styleUrls: ["./support-ticket-list.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class SupportTicketList {

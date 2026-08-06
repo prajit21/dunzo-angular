@@ -1,10 +1,11 @@
 import { NgClass } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
   selector: "app-all-alerts-table",
   templateUrl: "./all-alerts-table.html",
   styleUrls: ["./all-alerts-table.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgClass],
 })
 export class AllAlertsTable {

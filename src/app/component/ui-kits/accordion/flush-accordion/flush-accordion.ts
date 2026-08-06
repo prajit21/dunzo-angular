@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   NgbAccordionDirective,
@@ -16,6 +16,7 @@ import { FlushAccordions } from "../../../../shared/data/ui-kits/accordion/accor
   selector: "app-flush-accordion",
   templateUrl: "./flush-accordion.html",
   styleUrls: ["./flush-accordion.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgbAccordionDirective,
     NgbAccordionItem,

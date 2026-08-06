@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ActiveTasks } from "./active-tasks/active-tasks";
 import { LeadsStatus } from "./leads-status/leads-status";
@@ -20,6 +20,7 @@ import { ViewProfile } from "./view-profile/view-profile";
   selector: "app-default",
   templateUrl: "./default.html",
   styleUrls: ["./default.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     ViewProfile,
     TotalEarning,

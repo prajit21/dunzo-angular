@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import {
   Gallery,
@@ -15,6 +15,7 @@ import { galleryGridData } from "../../../shared/data/gallery/gallery-grid";
   selector: "app-gallery-grid",
   templateUrl: "./gallery-grid.html",
   styleUrls: ["./gallery-grid.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [GallerizeDirective],
 })
 export class GalleryGrid {

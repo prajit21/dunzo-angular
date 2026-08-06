@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgbCalendar, NgbDatepicker } from "@ng-bootstrap/ng-bootstrap";
 import { NgApexchartsModule } from "ng-apexcharts";
@@ -10,6 +10,7 @@ import { ClickOutsideDirective } from "../../../../shared/directives/outside.dir
   selector: "app-upcoming-meeting",
   templateUrl: "./upcoming-meeting.html",
   styleUrls: ["./upcoming-meeting.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective, NgbDatepicker, NgApexchartsModule],
 })
 export class UpcomingMeeting {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Feathericon } from "../../../shared/component/feathericon/feathericon";
 import { ClickOutsideDirective } from "../../../shared/directives/outside.directive";
@@ -7,6 +7,7 @@ import { ClickOutsideDirective } from "../../../shared/directives/outside.direct
   selector: "app-to-do-filter",
   templateUrl: "./to-do-filter.html",
   styleUrls: ["./to-do-filter.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective, Feathericon],
 })
 export class ToDoFilter {

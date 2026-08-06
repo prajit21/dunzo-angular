@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import {
   FormControl,
   FormGroup,
@@ -13,6 +13,7 @@ import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-new-contact",
   templateUrl: "./new-contact.html",
   styleUrls: ["./new-contact.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, ReactiveFormsModule],
 })
 export class NewContact {

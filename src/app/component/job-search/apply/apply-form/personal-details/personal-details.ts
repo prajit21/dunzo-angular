@@ -1,10 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: "app-personal-details",
   templateUrl: "./personal-details.html",
   styleUrls: ["./personal-details.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule],
 })
 export class PersonalDetails {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { AdvancedSmil } from "./advanced-smil/advanced-smil";
 import { BiPolarBarChart } from "./bi-polar-bar-chart/bi-polar-bar-chart";
@@ -17,6 +17,7 @@ import { SvgPath } from "./svg-path/svg-path";
   selector: "app-chartist-chart",
   templateUrl: "./chartist-chart.html",
   styleUrls: ["./chartist-chart.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     AdvancedSmil,
     SvgPath,

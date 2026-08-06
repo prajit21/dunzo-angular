@@ -1,5 +1,10 @@
 import { NgTemplateOutlet, NgClass } from "@angular/common";
-import { Component, HostListener, inject } from "@angular/core";
+import {
+  Component,
+  HostListener,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import {
   NavigationEnd,
   Router,
@@ -18,6 +23,7 @@ import { SvgIcon } from "../svg-icon/svg-icon";
   selector: "app-sidebar",
   templateUrl: "./sidebar.html",
   styleUrls: ["./sidebar.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     RouterLink,
     Feathericon,

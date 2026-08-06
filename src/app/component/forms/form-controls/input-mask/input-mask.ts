@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { DateFormat } from "./date-format/date-format";
 import { DefaultInputMask } from "./default-input-mask/default-input-mask";
@@ -8,6 +8,7 @@ import { TimeFormat } from "./time-format/time-format";
   selector: "app-input-mask",
   templateUrl: "./input-mask.html",
   styleUrls: ["./input-mask.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [DateFormat, TimeFormat, DefaultInputMask],
 })
 export class InputMask {}

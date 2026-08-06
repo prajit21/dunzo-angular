@@ -1,4 +1,9 @@
-import { Component, TemplateRef, inject } from "@angular/core";
+import {
+  Component,
+  TemplateRef,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
@@ -9,6 +14,7 @@ import { ModalData } from "../../../../../shared/data/ui-kits/modal/modal";
   selector: "app-scorlling-content",
   templateUrl: "./scorlling-content.html",
   styleUrls: ["./scorlling-content.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [Feathericon],
 })
 export class ScorllingContent {

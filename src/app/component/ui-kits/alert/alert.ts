@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { AdditionalContent } from "./additional-content/additional-content";
 import { AlertsIconsTextActions } from "./alerts-icons-text-actions/alerts-icons-text-actions";
@@ -14,6 +14,7 @@ import { OutlineDarkLightAlerts } from "./outline-dark-light-alerts/outline-dark
   selector: "app-alert",
   templateUrl: "./alert.html",
   styleUrls: ["./alert.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     LinkColorDarkTheme,
     LinkColorLightTheme,

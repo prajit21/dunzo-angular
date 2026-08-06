@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { simplePricingCard } from "../../../../shared/data/main-ecommerce/pricing";
 
@@ -6,6 +6,7 @@ import { simplePricingCard } from "../../../../shared/data/main-ecommerce/pricin
   selector: "app-simple-pricing-card",
   templateUrl: "./simple-pricing-card.html",
   styleUrls: ["./simple-pricing-card.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class SimplePricingCard {

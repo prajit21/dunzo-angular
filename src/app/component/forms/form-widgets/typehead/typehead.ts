@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { FormattedResults } from "./formatted-results/formatted-results";
 import { GlobalConfiguration } from "./global-configuration/global-configuration";
@@ -13,6 +13,7 @@ import { WikipediaSearch } from "./wikipedia-search/wikipedia-search";
   selector: "app-typehead",
   templateUrl: "./typehead.html",
   styleUrls: ["./typehead.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     SimpleTypehead,
     WikipediaSearch,

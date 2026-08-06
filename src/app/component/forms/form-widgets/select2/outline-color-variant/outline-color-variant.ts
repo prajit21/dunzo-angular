@@ -1,11 +1,12 @@
 import { TitleCasePipe } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: "app-outline-color-variant",
   templateUrl: "./outline-color-variant.html",
   styleUrls: ["./outline-color-variant.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule, TitleCasePipe],
 })
 export class OutlineColorVariant {

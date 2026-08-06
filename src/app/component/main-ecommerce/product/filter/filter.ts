@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgxSliderModule, Options } from "@angular-slider/ngx-slider";
 import { NgbRatingConfig } from "@ng-bootstrap/ng-bootstrap";
@@ -14,6 +14,7 @@ import {
   selector: "app-filter",
   templateUrl: "./filter.html",
   styleUrls: ["./filter.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgxSliderModule, CarouselModule],
 })
 export class Filter {

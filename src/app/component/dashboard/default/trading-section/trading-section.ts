@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { tradingData } from "../../../../shared/data/dashboard/default-data";
 
@@ -6,6 +6,7 @@ import { tradingData } from "../../../../shared/data/dashboard/default-data";
   selector: "app-trading-section",
   templateUrl: "./trading-section.html",
   styleUrls: ["./trading-section.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class TradingSection {

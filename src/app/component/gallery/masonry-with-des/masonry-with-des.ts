@@ -1,4 +1,4 @@
-import { Component, viewChild } from "@angular/core";
+import { Component, viewChild, ChangeDetectionStrategy } from "@angular/core";
 
 import { GallerizeDirective } from "ng-gallery/lightbox";
 import {
@@ -11,6 +11,7 @@ import {
   selector: "app-masonry-with-des",
   templateUrl: "./masonry-with-des.html",
   styleUrls: ["./masonry-with-des.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [GallerizeDirective, NgxMasonryModule],
 })
 export class MasonryWithDes {

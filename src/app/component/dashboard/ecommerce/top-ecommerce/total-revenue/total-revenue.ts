@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { NgApexchartsModule } from "ng-apexcharts";
 
@@ -8,6 +8,7 @@ import { TotalRevenueChart } from "../../../../../shared/data/dashboard/E-commer
   selector: "app-total-revenue",
   templateUrl: "./total-revenue.html",
   styleUrls: ["./total-revenue.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgApexchartsModule],
 })
 export class TotalRevenue {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
 
@@ -6,6 +6,7 @@ import { DropzoneConfigInterface, DropzoneModule } from "ngx-dropzone-wrapper";
   selector: "app-single-file-upload",
   templateUrl: "./single-file-upload.html",
   styleUrls: ["./single-file-upload.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [DropzoneModule],
 })
 export class SingleFileUpload {

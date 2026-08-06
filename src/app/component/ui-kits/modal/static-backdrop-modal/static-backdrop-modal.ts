@@ -1,4 +1,9 @@
-import { Component, TemplateRef, inject } from "@angular/core";
+import {
+  Component,
+  TemplateRef,
+  inject,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
@@ -7,6 +12,7 @@ import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
   selector: "app-static-backdrop-modal",
   templateUrl: "./static-backdrop-modal.html",
   styleUrls: ["./static-backdrop-modal.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FormsModule],
 })
 export class StaticBackdropModal {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { AlertsTable } from "./alerts-table/alerts-table";
 import { Badges } from "./badges/badges";
@@ -14,6 +14,7 @@ import { UiTable } from "./ui-table/ui-table";
   selector: "app-table-component",
   templateUrl: "./table-component.html",
   styleUrls: ["./table-component.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     UiTable,
     AlertsTable,

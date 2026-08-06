@@ -1,5 +1,5 @@
 import { NgClass } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { ClickOutsideDirective } from "../../../../shared/directives/outside.directive";
 import { EmailInbox } from "../email-inbox/email-inbox";
@@ -10,6 +10,7 @@ import { NewMail } from "../new-mail/new-mail";
   selector: "app-email-sidebar",
   templateUrl: "./email-sidebar.html",
   styleUrls: ["./email-sidebar.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ClickOutsideDirective, NgClass, EmailUser, NewMail, EmailInbox],
 })
 export class EmailSidebar {

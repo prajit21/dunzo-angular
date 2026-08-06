@@ -1,5 +1,10 @@
 import { NgClass } from "@angular/common";
-import { Component, SimpleChanges, input } from "@angular/core";
+import {
+  Component,
+  SimpleChanges,
+  input,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 
 import { ProfileData } from "./profile-data/profile-data";
 import * as data from "../../../shared/data/contacts/all-contact";
@@ -8,6 +13,7 @@ import * as data from "../../../shared/data/contacts/all-contact";
   selector: "app-personal",
   templateUrl: "./personal.html",
   styleUrls: ["./personal.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgClass, ProfileData],
 })
 export class Personal {

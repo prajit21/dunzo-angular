@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { breckpointSpecific } from "../../../../../shared/data/table/bootstrap-table/basic-tables";
 
@@ -6,6 +6,7 @@ import { breckpointSpecific } from "../../../../../shared/data/table/bootstrap-t
   selector: "app-breckpoint-specific",
   templateUrl: "./breckpoint-specific.html",
   styleUrls: ["./breckpoint-specific.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class BreckpointSpecific {
